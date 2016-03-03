@@ -5,28 +5,28 @@ Equipe 1:
   Antonio Plinio
   Felipe José
   Matheus Vasconcelos
-Funcionalidade:
+/Funcionalidade:
   Controle do ciclo de aluguel
 
 Equipe 2:
   Leonel Camurça
   Joâo Vidal
-Funcionalidade:
+/Funcionalidade:
   cadastro de carro
   
 Equipe 3:
   Mario Hercules
   Audinisio
-Funcionalidade:
+/Funcionalidade:
   Consulta de carros/Historico locação
 
 Equipe 4:
   Igor Oliveira
-Funcionalidade:
+/Funcionalidade:
   cadastro cliente / cadastro funcionario/ login e senha
 
 Equipe 5:
 
-Funcionalidade
+/Funcionalidade
   Relatórios ( faturamento / modelos mais alugados / ticket médio/ tempo médio)
 
