@@ -36,13 +36,15 @@ Equipe 5:
 Sugestão de Softwares para criação das telas do sistema (Open source)
 
 
-/Pencil
+Pencil
+
    http://pencil.evolus.vn
    
-/Balsamiq Mockups
+Balsamiq Mockups
+
     https://balsamiq.com     
     
-/Napkee
-    *Faz geração de código CSS/HTML
-    http://www.napkee.com   
+Napkee (Geração de código CSS/HTML)
+
+http://www.napkee.com   
 
