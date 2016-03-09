@@ -30,3 +30,19 @@ Equipe 5:
 /Funcionalidade
   Relatórios ( faturamento / modelos mais alugados / ticket médio/ tempo médio)
 
+
+# Softwares 
+
+Sugestão de Softwares para criação das telas do sistema (Open source)
+
+
+/Pencil
+   http://pencil.evolus.vn
+   
+/Balsamiq Mockups
+    https://balsamiq.com     
+    
+/Napkee
+    *Faz geração de código CSS/HTML
+    http://www.napkee.com   
+
