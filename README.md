@@ -10,7 +10,7 @@
   
 Funcionalidade:
 
-> Controle do ciclo de aluguel
+> - Controle do ciclo de aluguel
 
 ###### Equipe 2:
 
@@ -19,7 +19,7 @@ Funcionalidade:
 
 Funcionalidade:
 
-> Cadastro de carro
+> - Cadastro de carro
   
 ###### Equipe 3:
 
@@ -28,8 +28,8 @@ Funcionalidade:
 
 Funcionalidade:
   
-> Consulta de carros
-> Historico locação
+> - Consulta de carros
+> - Historico locação
 
 ###### Equipe 4:
 
@@ -37,15 +37,15 @@ Funcionalidade:
 
 Funcionalidade:
 
-> Cadastro de Cliente
-> Cadastro de Funcionario
-> Login e Senha
+> - Cadastro de Cliente
+> - Cadastro de Funcionario
+> - Login e Senha
 
 ###### Equipe 5:
 
 Funcionalidade
 
-> Relatórios ( Faturamento / Modelos mais alugados / Ticket médio/ Tempo médio)
+> - Relatórios ( Faturamento / Modelos mais alugados / Ticket médio/ Tempo médio)
 
 
 # Softwares 
