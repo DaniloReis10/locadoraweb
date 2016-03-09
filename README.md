@@ -1,34 +1,51 @@
-# locadoraweb
-Sistema do curso de tecnologia de informação turma 2016.1 Unifor
+# Locadora Web
 
-Equipe 1:
-  Antonio Plinio
-  Felipe José
-  Matheus Vasconcelos
-/Funcionalidade:
-  Controle do ciclo de aluguel
+## Sistema do Curso de Tecnologia de Informação / 2016.1 Unifor
 
-Equipe 2:
-  Leonel Camurça
-  Joâo Vidal
-/Funcionalidade:
-  cadastro de carro
+###### Equipe 1:
+
+- Antonio Plinio
+- Felipe José
+- Matheus Vasconcelos
   
-Equipe 3:
-  Mario Hercules
-  Audinisio
-/Funcionalidade:
-  Consulta de carros/Historico locação
+Funcionalidade:
 
-Equipe 4:
-  Igor Oliveira
-/Funcionalidade:
-  cadastro cliente / cadastro funcionario/ login e senha
+> Controle do ciclo de aluguel
 
-Equipe 5:
+###### Equipe 2:
 
-/Funcionalidade
-  Relatórios ( faturamento / modelos mais alugados / ticket médio/ tempo médio)
+- Leonel Camurça
+- Joâo Vidal
+
+Funcionalidade:
+
+> Cadastro de carro
+  
+###### Equipe 3:
+
+- Mario Hercules
+- Audinisio
+
+Funcionalidade:
+  
+> Consulta de carros
+> Historico locação
+
+###### Equipe 4:
+
+- Igor Oliveira
+
+Funcionalidade:
+
+> Cadastro de Cliente
+> Cadastro de Funcionario
+> Login e Senha
+
+###### Equipe 5:
+
+Funcionalidade
+
+> Relatórios ( Faturamento / Modelos mais alugados / Ticket médio/ Tempo médio)
 
 
 # Softwares 
