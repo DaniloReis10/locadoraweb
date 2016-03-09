@@ -38,13 +38,13 @@ Sugestão de Softwares para criação das telas do sistema (Open source)
 
 Pencil
 
-   http://pencil.evolus.vn
+	http://pencil.evolus.vn/
    
 Balsamiq Mockups
 
-    https://balsamiq.com     
+	https://balsamiq.com/     
     
 Napkee (Geração de código CSS/HTML)
 
-http://www.napkee.com   
+	http://www.napkee.com   
 
