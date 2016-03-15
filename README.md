@@ -25,6 +25,7 @@ Funcionalidade:
 
 - Mario Hercules
 - Audinisio
+- Rute
 
 Funcionalidade:
   
