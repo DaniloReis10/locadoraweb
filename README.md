@@ -44,6 +44,8 @@ Funcionalidade:
 
 ###### Equipe 5:
 
+Lucas dos Santos Brito
+
 Funcionalidade
 
 > - Relatórios ( Faturamento / Modelos mais alugados / Ticket médio/ Tempo médio)
