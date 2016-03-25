@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+    <link rel="stylesheet" href="css/css.css">
+	<title>Locadora Web de Carros</title>
+	</head>
+<body>
+	<div id="cabecalho"> 
+	 Locadora Web - Carros <div id="sair-topo"><a href="login.html" style="text-decoration: none" class="sair-link">Sair</a></div>
+	</div>
+	<div id="conteudo">
+		<nav id="menu">
+			<ul>
+				<li><a href="lista_os.html" class="ativo">Listar OS</a></li>
+				<li><a href="cadastra_os.html">Cadastrar OS</a></li>
+				<li><a href="ciclo_vida_os.html">Vizualizar Andamento</a></li>
+				<li><a href="meus_dados.html">Meus Dados</a></li>
+			</ul>
+		</nav>
+		<p>
+		<table class="dados">
+			<tr>
+				<th>Nome do Cliente</th>
+				<th>Ordem de Serviço</th>
+				<th>Código do Carro</th>
+				<th>Status</th>
+				<th>Ações</th>
+			</tr>
+			<tr>
+				<td>José Carlos</td>
+				<td>001</td>
+				<td>12</td>
+				<td>Entrega</td>
+				<td>
+					<a href="edita_os.html"><img src="images/pencil.png" alt="Editar" id="editar"></a>
+					&#160;&nbsp;&nbsp;
+					<a href=""><img src="images/delete.png" alt="Excluir" id="excluir"></a>
+				</td>
+			</tr>
+		</table>
+	</div>
+
+	<div id="rodape">
+		<div class="rodape-bar">
+			<strong>LocadoraWeb</strong> - Carros | 2016
+		</div>
+	</div>
+</body>
+</html>
