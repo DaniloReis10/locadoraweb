@@ -8,9 +8,13 @@
     font-weight: bold;
 }
 
-#sair {
+#sair-topo {
 	float: right;
 	font-size: 22px;
+}
+
+#sair-topo a.sair-link {
+	color:#576296;
 }
 
 #conteudo {
@@ -90,4 +94,3 @@ a {
 			
 div.rodape-bar {text-align:center; font-size:14px; padding:5px 20px; display:block; color:#576297; border-top:solid 1px #576296;}
 div.rodape-bar strong {color:#576296;} 
-
