@@ -8,16 +8,21 @@
     font-weight: bold;
 }
 
+#logo{
+	float: left;
+}
+
 #sair-topo {
 	float: right;
 	font-size: 22px;
+	padding-top: 5px;
 }
 
 #sair-topo a.sair-link {
 	color:#576296;
 }
 
-#novo {
+#salvar {
 	margin: auto;
 	display: table;
 	padding-top: 50px;
@@ -49,8 +54,27 @@ h1 {
 	
 }	
 
+h2{
+	color: #2a2948;
+	text-indent: 1em;
+}
+
 a {
 	color: 576296;
+}
+
+p.tabular {
+	text-indent: 3em;
+}
+
+#formulario{
+	font-size: 18px;
+	padding: 10px;
+	padding-left: 40px;
+}
+
+input.caixa-texto{
+	font-size: 18px;
 }
 
 #menu {
@@ -73,10 +97,10 @@ a {
 	display: inline-block;
  
 	/* estilo do link */
-	background-color:#EDEDED;
+	background-color:#F0F0Fb;
 	color: #333;
 	text-decoration: none;
-	border-bottom:3px solid #EDEDED;
+	border-bottom:3px solid #E0E0E0;
 }
 
 #menu ul li a:hover {
@@ -89,24 +113,25 @@ a {
 	background-color:#D6D6D6;
 	color: #6D6D6D;
 	border-bottom:3px solid #576296;
+	font-weight: bold;
 }
 
 #rodape{
 	display:block; 
-	width:100%;
+	width: 98%;
 	position: absolute;
 	bottom: 0;
-
+	background-color:#FFF
 	}
 			
-div.rodape-bar {text-align:center; font-size:14px; padding:5px 20px; display:block; color:#5762b0; border-top:solid 1px #576296;}
+div.rodape-bar {text-align:center; font-size:14px; padding:5px; display:block; color:#5762b0; border-top:solid 1px #576296;}
 div.rodape-bar strong {color:#576297;} 
 
 table.dados{
 	height:auto;
 	margin-bottom: 10px;
 	width:100%;
-
+	padding:10px;
 }
 
 table.dados tr th{
