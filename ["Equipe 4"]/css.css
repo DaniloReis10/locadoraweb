@@ -17,6 +17,12 @@
 	color:#576296;
 }
 
+#novo {
+	margin: auto;
+	display: table;
+	padding-top: 50px;
+}
+
 #conteudo {
 
 
@@ -35,6 +41,7 @@
 
 body{
 	color: #333333;
+	font-family: serif;
 
 }
 
@@ -92,5 +99,55 @@ a {
 
 	}
 			
-div.rodape-bar {text-align:center; font-size:14px; padding:5px 20px; display:block; color:#576297; border-top:solid 1px #576296;}
-div.rodape-bar strong {color:#576296;} 
+div.rodape-bar {text-align:center; font-size:14px; padding:5px 20px; display:block; color:#5762b0; border-top:solid 1px #576296;}
+div.rodape-bar strong {color:#576297;} 
+
+table.dados{
+	height:auto;
+	margin-bottom: 10px;
+	width:100%;
+
+}
+
+table.dados tr th{
+	background-color:#2a2948;
+	color:#fff;
+	color:1em;
+	padding:10px;
+	text-align: left;
+	font-size: 18px;
+}
+
+table.dados tr td{
+	padding:5px 10px;
+	text-align: left;
+	font-size: 16px;
+}
+
+.botao {
+  background: #3498db;
+  background-image: -webkit-linear-gradient(top, #2a2948, #576297);
+  background-image: -moz-linear-gradient(top, #2a2948, #576297);
+  background-image: -ms-linear-gradient(top, #2a2948, #576297);
+  background-image: -o-linear-gradient(top, #2a2948, #576297);
+  background-image: linear-gradient(to bottom, #2a2948, #576297);
+  -webkit-border-radius: 15;
+  -moz-border-radius: 15;
+  border-radius: 8px;
+  color: #ffffff;
+  font-size: 16px;
+  padding: 7px 10px 10px 10px;
+  text-decoration: none;
+  font-family: serif;
+  font-weight: bold;
+}
+
+.botao:hover {
+  background: #3cb0fd;
+  background-image: -webkit-linear-gradient(top, #576297, #3498db);
+  background-image: -moz-linear-gradient(top, #576297, #3498db);
+  background-image: -ms-linear-gradient(top, #576297, #3498db);
+  background-image: -o-linear-gradient(top, #576297, #3498db);
+  background-image: linear-gradient(to bottom, #576297, #3498db);
+  text-decoration: none;
+}
