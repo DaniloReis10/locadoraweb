@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>FortalCity - Rent a Car</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="css/style.css" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+    <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+</head>
+
+<body background="assets/img2.png">
+    <div class="container-fluid">
+        <header>
+            <div class="container">
+                <img alt="logo" src="assets/logo.png" />
+
+                <ul class="nav navbar-nav navbar-right navbar-fixed">
+
+                    <li>
+                        <a href="#">
+                            <button id="btn-login" class="btn">Log in</button>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <button id="btn-signup" class="btn">Cadastre-se</button>
+                        </a>
+                    </li>
+                    <li><a href="#"><span class="icons fa fa-home fa-2x"></span></a></li>
+                    <li><a href="#"><span class="icons fa fa-car fa-2x"></span></a></li>
+                    <li><a href="#"><span class="icons fa fa-users fa-2x"></span></a></li>
+                    <li><a href="#"><span class="icons fa fa-map-marker fa-2x"></span></a></li>
+                    <li><a href="#"><span class="icons fa fa-envelope fa-2x"></span></a></li>
+                </ul>
+            </div>
+
+        </header>
+
+        <!--<img class="img-responsive main-img" src="assets/img2.png" /> -->
+        <div class="container">
+            <div class="form-login">
+                <input type="text" placeholder="Usuário" required oninvalid="this.setCustomValidity('Nome inválido')" oninput="setCustomValidity('')" pattern=".{1,}[a-zA-Z]+" required title="Nome inválido" name="name" class="form-input" />
+                <input type="password" placeholder="Senha" oninvalid="this.setCustomValidity('Mínimo de 6 carácteres')" oninput="setCustomValidity('')" pattern=".{5,}[a-zA-Z|0-9]+" required title="Mínimo de 6 carácteres" name="pwd" class="form-input" />
+                <input type="submit" class="btn" id="button" value="Entrar"></input>
+            </div>
+
+        </div>
+
+        <footer style="background-color: rgb(35,35,35);" class="footer-index">
+            <div class="container">
+                <div class="row center-row">
+                    <div class="col-sm-3 center-col">
+                        <p class="copyright text-muted small">Copyright &copy; FortalCity 2016. Todos os direitos reservados.</p>
+                        <p class="text-muted small">Contatos: fortalcity@fortalcity.com.br</p>
+                    </div>
+                </div>
+                <div class="row center-row">
+                    <div class="col-sm-3 center-col">
+                        <ul class="debug nav navbar-nav navbar-footer">
+                            <li><a href="#"><span class="social-icons fa fa-facebook fa-1x"></span></a></li>
+                            <li><a href="#"><span class="social-icons fa fa-instagram fa-1x"></span></a></li>
+                            <li><a href="#"><span class="social-icons fa fa-linkedin fa-1x"></span></a></li>
+                            <li><a href="#"><span class="social-icons fa fa-twitter fa-1x"></span></a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+        </footer>
+    </div>
+
+</body>
+
+</html>
