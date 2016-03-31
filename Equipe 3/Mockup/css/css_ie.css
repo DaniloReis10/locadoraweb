@@ -1,0 +1,174 @@
+input[type="text"],
+input[type="password"],
+input[type="button"],
+input[type="submit"],
+textarea,
+a.sign_button,
+.sbHolder,
+.access-content a,
+.main-form,
+.main_form_navigation,
+.title-form,
+.datepicker,
+#progress-bar,
+.progress-bar-step .step_number,
+#sign_up,
+.widget, .widget .widget-title,
+.widget .widget-footer,
+.widget-advertising img,
+.filter_quantity,
+.top-seller,
+.shortcode_view,
+.widget.main-widget .post,
+.subtotal,
+.subtotal_content,
+#primary,
+#sign_up_conteiner,
+.one-column #content {
+  position: relative;
+  behavior: url(js/PIE.htc);
+}
+.widget.main-widget {
+  behavior: none;
+}
+#slider-post .entry-header,
+#slider-post .entry-content {
+  -ms-filter:"progid:DXImageTransform.Microsoft.Shadow(color=#595959, direction=225, strength=1)";
+  filter:progid:DXImageTransform.Microsoft.Shadow(color=#595959, direction=225, strength=1); 
+}
+.access-content ul ul:before {
+  top: -15px;
+}
+/* IE7 */
+*:first-child+html .center-slider .form-block.pick-up input,
+*:first-child+html .center-slider .form-block.drop-off input,
+*:first-child+html .page .form-block.pick-up input,
+*:first-child+html .page .form-block.drop-off input {
+    margin-left: -14px;
+}
+/* IE8 */
+@media \0screen {
+  .center-slider .form-block.form-submit > input,
+  .page .form-block.form-submit > input {
+    margin: 25px 0 25px 10px;
+  }
+}
+/* IE7 */
+*:first-child+html div.widget-title {
+  padding-bottom: 0px;
+}
+.shortcode_slider {
+  *width: 245px;
+}
+.shortcode_single_slider {
+  *width: 245px;
+}
+.one-column #primary,
+.two-column #primary,{
+    *margin-bottom: 37px;
+}
+* {
+  *z-index: 1;
+}
+.sbOptions,
+#branding,
+#primary {
+  *position: relative;
+}
+#branding {
+  *height: 86px;
+}
+.main-form,
+#branding,
+.sbHolder{
+  *z-index: 10;
+}
+.widget-testimonials .widget-title > div {
+    *margin-bottom: 8px;
+}
+.widget.testimonials .widget-footer {
+    *position: absolute;
+    *right: 0;
+}
+.page-two-column #main {
+  *margin-top: 18px;
+}
+.filter_quantity {
+    *position: absolute;
+    *right: 19px;
+    *margin-top: 4px;
+}
+.additional-block input.continue_button {
+  *width: 116px;
+}
+.top-seller,
+.widget h4 a,
+span.price  {
+  *position: absolute;
+  *right: 19px;
+  *margin-top: 0px;
+}
+.widget-footer-total {
+  *width: auto;
+}
+.form_element input {
+  *left: -11px;
+}
+.form_element > input.postal_code {
+  *width: 80px;
+}
+.shortcode_view {
+  *top: 32px;
+}
+.shortcode_view div img{
+  *margin-top: 5px;
+}
+.form_element input {
+  line-height: 42px;
+}
+.content-form input.location {
+  line-height: 42px;
+}
+#sign_up input[type=text] {
+  line-height: 41px;
+}
+.shortcode_input {
+  line-height: 41px;
+}
+#slider-post .entry-meta {
+  filter:progid:DXImageTransform.Microsoft.Alpha(opacity=50); 
+  zoom: 1;
+}
+.site-logo {
+    filter:progid:DXImageTransform.Microsoft.Alpha(opacity=30);
+}
+.disabled_form #book_car_content div {
+  filter:progid:DXImageTransform.Microsoft.Alpha(opacity=70);
+}
+.testimonials_navigation img:hover {
+  filter:progid:DXImageTransform.Microsoft.Alpha(opacity=60);
+  zoom: 1;
+}
+#overlay_block {
+  filter:progid:DXImageTransform.Microsoft.Alpha(opacity=80);
+}
+#footer-content .site-logo {
+  filter:progid:DXImageTransform.Microsoft.Alpha(opacity=15);
+  zoom: 1;  
+}
+#slider-pattern {
+  filter:progid:DXImageTransform.Microsoft.Alpha(opacity=60);
+  position: absolute;
+}
+#slider-img .pager li { 
+  zoom: 1;
+  *display: inline;
+}
+input[type=text] {
+  line-height: 41px;
+}
+:root .center-slider .form-block.form-submit > input,
+:root .page .form-block.form-submit > input {
+  margin-right: 0\0/IE9;
+  margin-left: 0\0/IE9;
+}
