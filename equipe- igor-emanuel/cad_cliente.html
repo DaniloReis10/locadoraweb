@@ -12,9 +12,9 @@
 	<link rel="stylesheet" type="text/css" href="css/style.css" />
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
 	<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
-	<script src="js/cad_cliente.js"></script>
-</head>
 
+</head>
+<script type="text/javascript" src="cad_cliente.js"></script>
 
 <body>
 	<div class="container-fluid">
@@ -40,7 +40,7 @@
 		<div class="container form-signup">
 			<i id="signup-icon" class="fa fa-user-plus fa-4x"></i>
 			<h3 id="header-signup"> Cadastre-se</h3>
-			<form name="client-form" onsubmit="return validateForm()" method="post">
+			<form name="client-form" onsubmit="return checkPWD()">
 				<div class="row">
 					<p class="form-content">Nome*</p>
 					<input type="text" required oninvalid="this.setCustomValidity('Nome inválido')" oninput="setCustomValidity('')" pattern=".{1,}[a-zA-Z]+" required title="Nome inválido" name="name" class="form-input" />
@@ -58,7 +58,7 @@
 					<p class="form-content">Senha*</p>
 					<input type="password" oninvalid="this.setCustomValidity('Mínimo de 6 carácteres')" oninput="setCustomValidity('')" pattern=".{5,}[a-zA-Z|0-9]+" required title="Mínimo de 6 carácteres" name="pwd" class="form-input" />
 					<p class="form-content">Digite novamente sua senha*</p>
-					<input type="password" oninvalid="this.setCustomValidity('Mínimo de 6 carácteres')" oninput="setCustomValidity('')" pattern=".{5,}[a-zA-Z|0-9]+" required title="Mínimo de 6 carácteres" name="pwd-conf" class="form-input" />
+					<input type="password" name="pwd-conf" required class="form-input" />
 
 				</div>
 				<div class="row">
@@ -105,11 +105,11 @@
 				<div class="row">
 					<div class="col-md-6 center-col">
 						<p class="form-content">Rua*</p>
-						<input type="text" required oninvalid="this.setCustomValidity('Nome inválido')" oninput="setCustomValidity('')" pattern=".{4,}[a-zA-Z]+" required title="Nome inválido" name="street" class="form-input" />
+						<input type="text" id="street" required oninvalid="this.setCustomValidity('Nome inválido')" oninput="setCustomValidity('')" pattern=".{4,}[a-zA-Z]+" required title="Nome inválido" name="street" class="form-input" />
 					</div>
 					<div class="col-sm-5 center-col">
 						<p class="form-content">Bairro:*</p>
-						<input type="text" required oninvalid="this.setCustomValidity('Nome inválido')" oninput="setCustomValidity('')" pattern=".{4,}[a-zA-Z]+" required title="Nome inválido" name="area" class="form-input" />
+						<input type="text" id="area" required oninvalid="this.setCustomValidity('Nome inválido')" oninput="setCustomValidity('')" pattern=".{4,}[a-zA-Z]+" required title="Nome inválido" name="area" class="form-input" />
 					</div>
 				</div>
 				<div class="row">
@@ -119,7 +119,7 @@
 					</div>
 					<div class="col-sm-5 center-col">
 						<p class="form-content">CEP:*</p>
-						<input type="text" required oninvalid="this.setCustomValidity('Formato de CEP inválido')" oninput="setCustomValidity('')" pattern="\d{5}-\d{3}" required title="Formato de CEP inválido" name="zipcode" class="form-input" />
+						<input type="text" required oninvalid="this.setCustomValidity('CEP inválido')" oninput="setCustomValidity('')" pattern="\d{5}-\d{3}" onblur="checkCode(this.value);" required title="CEP inválido" name="zipcode" class="form-input" />
 					</div>
 				</div>
 				<input type="submit" class="btn" id="button" value="Criar minha conta"></input>
