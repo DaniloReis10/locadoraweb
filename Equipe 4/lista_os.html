@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+    <link rel="stylesheet" href="css/css.css">
+	<title>Locadora Web de Carros</title>
+	 <script type="text/javascript" src="js/js.js"></script>
+	 <script type="text/javascript" src="scripts/jquery-2.2.2.min.js"></script>
+	</head>
+<body>
+	<div id="cabecalho"> 
+	<div id="logo"><img src="images/logo1.png" alt="logo" height="46px"></div>&#160;
+	 Locadora Web - Carros <div id="sair-topo">
+	 <a href="login.html" style="text-decoration: none" class="sair-link">Sair</a></div>
+	</div>
+	<div id="conteudo">
+		<nav id="menu">
+			<ul>
+				<li><a href="lista_os.html" class="ativo">Listar OS</a></li>
+				<li><a href="cadastra_os.html">Cadastrar OS</a></li>
+				<li><a href="ciclo_vida_os.html">Vizualizar Andamento</a></li>
+				<li><a href="meus_dados.html">Meus Dados</a></li>
+			</ul>
+		</nav>
+		<p>
+		<form id="lista" method="post"><table class="dados" id="lista_os">
+			<tr>
+				<th>Nome do Cliente</th>
+				<th>Ordem de Serviço</th>
+				<th>Código do Carro</th>
+				<th>Responsável</th>
+				<th>Status</th>
+				<th>Ações</th>
+			</tr>
+			<tr class="dif">
+				<td>José Carlos</td>
+				<td>001</td>
+				<td>12</td>
+				<td>Henrique Jorge</td>
+				<td>Entrega</td>
+				<td>
+					<a href="edita_os.html"><img src="images/pencil.png" alt="Editar" id="editar" title="Editar"></a>
+					&#160;&nbsp;&nbsp;
+					<a href=""><img src="images/delete.png" onclick="alerta_excluir();" alt="Excluir" id="excluir" title="Excluir"></a>
+				</td>
+			</tr>
+			<tr>
+				<td>Maria Clara</td>
+				<td>002</td>
+				<td>03</td>
+				<td>Henrique Jorge</td>
+				<td>Entrega</td>
+				<td>
+					<a href="edita_os.html"><img src="images/pencil.png" alt="Editar" id="editar" title="Editar"></a>
+					&#160;&nbsp;&nbsp;
+					<a href=""><img src="images/delete.png" onclick="alerta_excluir();" alt="Excluir" id="excluir" title="Excluir"></a>
+				</td>
+			</tr>
+			<tr class="dif">
+				<td>Julio Cesar</td>
+				<td>003</td>
+				<td>07</td>
+				<td>Mara Santos</td>
+				<td>Entrega</td>
+				<td>
+					<a href="edita_os.html"><img src="images/pencil.png" alt="Editar" id="editar" title="Editar"></a>
+					&#160;&nbsp;&nbsp;
+					<a href=""><img src="images/delete.png" onclick="alerta_excluir();" alt="Excluir" id="excluir" title="Excluir"></a>
+				</td>
+			</tr>
+			<tr>
+				<td>Raimunda Silva</td>
+				<td>004</td>
+				<td>13</td>
+				<td>Henrique Jorge</td>
+				<td>Devolução</td>
+				<td>
+					<a href="edita_os.html"><img src="images/pencil.png" alt="Editar" id="editar" title="Editar"></a>
+					&#160;&nbsp;&nbsp;
+					<a href=""><img src="images/delete.png" onclick="alerta_excluir();" alt="Excluir" id="excluir" title="Excluir"></a>
+				</td>
+			</tr>
+			<tbody>
+			</tbody>
+		</table></form>
+	</div>
+
+	<div id="rodape">
+		<div class="rodape-bar">
+			<strong>LocadoraWeb</strong> - Carros | 2016
+		</div>
+	</div>
+</body>
+</html>

@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+    <link rel="stylesheet" href="css/css.css">
+	<title>Locadora Web de Carros</title>
+     <script type="text/javascript" src="scripts/jquery-2.2.2.min.js"></script>
+    <script type="text/javascript" src="scripts/jquery-ui.js"></script>
+    <script type="text/javascript" src="js/functions.js"></script>
+    <script type="text/javascript" src="js/js.js"></script>
+    <link href="css/jquery-ui.css" rel="stylesheet">
+
+
+</head>
+<body>
+	<div id="cabecalho"> 
+	<div id="logo"><img src="images/logo1.png" alt="logo" height="46px"></div>&#160;
+	 Locadora Web - Carros <div id="sair-topo">
+	 <a href="login.html" style="text-decoration: none" class="sair-link">Sair</a></div>
+	</div>
+	<div id="conteudo">
+		<nav id="menu">
+			<ul>
+				<li><a href="lista_os.html" >Listar OS</a></li>
+				<li><a href="cadastra_os.html">Cadastrar OS</a></li>
+				<li><a href="ciclo_vida_os.html"class="ativo">Vizualizar Andamento</a></li>
+				<li><a href="meus_dados.html">Meus Dados</a></li>
+			</ul>
+		</nav>
+	</div>
+
+
+
+
+
+<ul id="menu2">
+ 
+ 
+     <li><a href="status_entrega.html" onclick="mostrarAtivo(this);">Entrega</a></li>
+   <li><a href="status_devolucao.html" onclick="mostrarAtivo(this);">Devolução</a></li>
+    <li><a href="status_vistoria.html" onclick="mostrarAtivo(this);" class="ativo2">Vistoria</a></li>
+   <li><a href="status_manutencao.html" onclick="mostrarAtivo(this);">Manutenção</a></li>
+    <li><a href="status_lavagem.html" onclick="mostrarAtivo(this);">Lavagem</a></li>
+        <li><a href="ciclo_vida_os.html" onclick="mostrarAtivo(this);">Fazer nova busca</a></li>
+   
+    
+ 
+</ul>
+
+<form id="formulario">
+     Luzes:
+     <p class="tabular"</imput>&#160;<textarea id="textoArea" rows="1" cols="40" maxlength="500" placeholder="Observacoes..."></textarea></p>
+
+     Capô:
+     <p class="tabular"</imput>&#160;<textarea id="textoArea" rows="1" cols="40" maxlength="500" placeholder="Observacoes..."></textarea></p>
+
+     Pneus:
+     <p class="tabular"</imput>&#160;<textarea id="textoArea" rows="1" cols="40" maxlength="500" placeholder="Observacoes..."></textarea></p>
+
+     Setas:
+     <p class="tabular"</imput>&#160;<textarea id="textoArea" rows="1" cols="40" maxlength="500" placeholder="Observacoes..."></textarea></p>
+
+     Elétrica:
+     <p class="tabular"</imput>&#160;<textarea id="textoArea" rows="1" cols="40" maxlength="500" placeholder="Observações..."></textarea></p>
+
+     Hidráulica:
+     <p class="tabular"</imput>&#160;<textarea id="textoArea" rows="1" cols="40" maxlength="500" placeholder="Observações..."></textarea></p>
+     Encaminhar para:
+     <p class="tabular">
+            <select form="formulario" name="tipo_lavagem" id="lavagem1">
+           
+                <option value="func2">Manuteção</option>
+                <option value="func3">Lavagem</option>
+                <option value="func4">Garagem</option>
+                
+               
+            </select>
+    </p>
+</form>
+
+<div id="salvar"><button id="salvavistoria" class="botao" onclick="salvarvistoria();">Salvar</button></div>
+
+<p>
+
+	<div id="rodape">
+		<div class="rodape-bar">
+			<strong>LocadoraWeb</strong> - Carros | 2016
+		</div>
+	</div>
+</body>
+</html>

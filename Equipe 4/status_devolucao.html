@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+<head>
+	 <meta charset="utf-8">
+    <link rel="stylesheet" href="css/css.css">
+    <title>Locadora Web de Carros</title>
+    <script type="text/javascript" src="scripts/jquery-2.2.2.min.js"></script>
+    <script type="text/javascript" src="scripts/jquery-ui.js"></script>
+    <script type="text/javascript" src="js/functions.js"></script>
+    <script type="text/javascript" src="js/js.js"></script>
+    <link href="css/jquery-ui.css" rel="stylesheet">
+
+	<title>Locadora Web de Carros</title>
+</head>
+ 
+
+    <script type="text/javascript">
+    
+    </script>
+
+
+<body>
+	<div id="cabecalho"> 
+	<div id="logo"><img src="images/logo1.png" alt="logo" height="46px"></div>&#160;
+	 Locadora Web - Carros <div id="sair-topo">
+	 <a href="login.html" style="text-decoration: none" class="sair-link">Sair</a></div>
+	</div>
+	<div id="conteudo">
+		<nav id="menu">
+			<ul>
+				<li><a href="lista_os.html" >Listar OS</a></li>
+				<li><a href="cadastra_os.html">Cadastrar OS</a></li>
+				<li><a href="ciclo_vida_os.html" class="ativo">Vizualizar Andamento</a></li>
+				<li><a href="meus_dados.html">Meus Dados</a></li>
+			</ul>
+		</nav>
+	</div>
+
+
+<ul id="menu2">
+ 
+ 
+     <li><a href="status_entrega.html" onclick="mostrarAtivo(this);">Entrega</a></li>
+   <li><a href="status_devolucao.html" onclick="mostrarAtivo(this);" class="ativo2">Devolução</a></li>
+    <li><a href="status_vistoria.html" onclick="mostrarAtivo(this);">Vistoria</a></li>
+   <li><a href="status_manutencao.html" onclick="mostrarAtivo(this);">Manutenção</a></li>
+    <li><a href="status_lavagem.html" onclick="mostrarAtivo(this);">Lavagem</a></li>
+        <li><a href="ciclo_vida_os.html" onclick="mostrarAtivo(this);">Fazer nova busca</a></li>
+   
+    
+ 
+</ul>
+<p>
+
+
+
+<form id="formulario">
+
+ 
+  
+    Responsável: 
+            <p class="tabular">
+            <select form="formulario" name="responsavel" id="responsavel">
+                <option value="func1">Henrique Jorge</option>
+                <option value="func2">Mara Santos</option>
+            </select>
+            </p>
+ 
+    Data da Devolução:
+    <p class="tabular"><input type="date" id="datepicker" name="data" placeholder="mm/dd/aaaa"></p>
+    Hora da Devolução:
+    <p class="tabular"><input type="text"class="caixa-texto" name="hora" id="horadevolucao" maxlength="5" OnKeyPress="formatar('##:##', this)" placeholder="hh:mm"></p>
+ 
+    Tanque do Carro:
+    <p class="tabular"  width="265"><input type="text"class="caixa-texto" name="text" id="tanquedevolucao" maxlength="40" placeholder="cheio,vazio,%..."></p>
+    Quilometragem:
+    <p class="tabular" width="265"><input type="text"class="caixa-texto" name="km_entrega" id="kmdevolucao" maxlength="40" ></p>
+  Obs:.
+  <p class="tabular" ><textarea class="caixa" rows="5" cols="43" maxlength="500" placeholder="Observações..."></textarea></p>
+
+
+ 
+
+</form>
+<p>
+
+
+
+
+        <div id="salvar"><button id="cadastrar" class="botao" onclick="salvardevolucao();">Salvar</button></div>
+    </div>
+<p>
+
+
+	<div id="rodape">
+		<div class="rodape-bar">
+			<strong>LocadoraWeb</strong> - Carros | 2016
+		</div>
+	</div>
+</body>
+</html>
