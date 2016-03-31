@@ -9,6 +9,9 @@
           integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
     <script src="js/jquery.js"></script>
     <script src="js/jquery-ui.min.js"></script>
+    <script src="js/jquery.validate.min.js"></script>
+
+    <script src="js/jquery.mask.min.js"></script>
     <script src="js/all.js"></script>
 
     <meta charset="UTF-8">
@@ -38,18 +41,18 @@
         </div>
     </div>
     <div class="content">
-        <form role="form">
+        <form role="form" id="create-form">
             <div class="form-group">
                 <label for="desc">Descrição:</label>
-                <input type="text" class="form-control" id="desc">
+                <input type="text" class="form-control required" id="desc" name="desc">
             </div>
             <div class="form-group">
                 <label for="compra">Data de Compra:</label>
-                <input type="date" class="form-control" id="compra">
+                <input type="text" class="form-control required date" id="compra" name="compra">
             </div>
             <div class="form-group">
                 <label for="image">Imagem:</label>
-                <input type="file" class="form-control" id="image">
+                <input type="file" class="form-control" id="image" name="image">
             </div>
             <button type="submit" class="btn btn-default">Criar</button>
 
