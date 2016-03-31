@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en-US">
+	<head>
+		<title>Renty - Car Rental &amp; Booking HTML5 Template</title>
+		<link rel="shortcut icon" type="image/x-icon" href="images/favicon.ico" />
+		<meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link rel="stylesheet" href="css/jquery-ui.css" type="text/css" media="all" />		
+		<link rel="stylesheet" href="css/style.css" type="text/css" media="all" />
+		<link rel="stylesheet" href="css/jquery.slider.min.css" />	
+		<!--[if IE]>
+		<script type="text/javascript" src="js/html5.js"></script>
+		<link rel="stylesheet" id="stylesheet-ie" href="css/css_ie.css" type="text/css" media="all" />
+		<![endif]-->		
+	</head>
+	<body class="page no-main-form">
+		<div id="conteiner">
+			<div id="branding">
+				<div id="branding-content">
+					<div class="menus">
+						
+									
+				  </div>
+					<div class="title-content">
+						<a href="index.html" title="">
+							<img class="site-logo" src="images/thumb.png" alt="" />
+							<span class="site-title">LocWEB</span>
+							<h1 class="site-title">&nbsp;</h1>
+						</a>								
+					</div>				
+					<div class="access-content">
+						<label for="menu-icon" class="menu-icon"><img src="images/menu.png" alt="menu" /></label>
+						<input type="checkbox" id="menu-icon" value="1" />					
+					  <ul>
+							<li class="menu-close">
+								<span>&#10006;</span>
+							</li>
+							<li class="current_page_item menu-item-has-children">
+								<a href="index.html" title="">Home</a>
+								<ul class="children">
+									<li class="current_page_item"><a href="index.html" title="">Consultar</a></li>								
+							  </ul>
+							</li>
+							<li class="menu-item-has-children">
+								<a href="#" title="">Paginas</a>
+								<ul class="children">
+									<li><a href="escolher.html" title="">Escolher Carro</a></li>
+									<li><a href="detalhes.html" title="">Outras Opções</a></li>
+									<li><a href="relatorios.html" title="">Relatórios</a></li>
+								</ul>
+							</li>							
+					  </ul>
+					</div><!-- .access -->				
+					<div class="member">
+						<span class="sign_in"><a class="sign_button tab_link_button" href="#sign_in" title="">Sign in</a></span>
+						<span class="register"><a class="sign_button tab_link_button" href="#register" title="">Register</a></span>
+					</div>
+				</div><!-- #branding-content -->
+				<div class="clear"></div>
+			</div><!-- #branding -->						
+			<div id="main">
+				<div id="primary">
+					<div class="widget widget-shortcode">	
+						<div class="widget-title">
+							<div>
+								<img src="images/list.png" alt="" />
+								Relatórios
+							</div>
+							<div class="clear"></div>	
+						</div>
+						<h4>Lista de carros</h4>
+						<div class="widget-content widget-note">
+						  <div class="clear"></div>
+						</div>
+					</div>
+					<div id="sign_up_conteiner">
+						<form action="#" id="sign_up">
+							<div class="sign_up_text">
+								Signup for our email to celebrate great specials 
+							</div>
+							<div class="sign_up_form">
+								<input id="sign_up_name" type="text" value="" placeholder="Name" />
+								<input id="sign_up_email" type="email" value="" placeholder="Email"/>
+								<input class="orange_button" type="submit" value="Signup"/>
+								<div class="clear"></div>
+							</div>
+							<div class="clear"></div>
+						</form>	
+					</div>
+				</div>
+			</div>
+			<div class="clear"></div>
+			<footer id="footer">
+			  <div id="footer-content">
+				  <img class="site-logo" src="images/thumb.png" alt="" />
+			    <h1 class="site-title">LocWEB</h1>			
+					<div class="company-name">LocWEB Unifor.br</div>
+				</div><!-- #footer-content -->
+			</footer><!--end:footer-->
+		</div><!--end:conteiner-->
+		<div id="overlay_block"></div>
+		<div class="admin-form-content sign_register_block">
+			<div class="admin-form-block">
+	 			<form class="main-form admin-form" action="#">	
+	 				<div class="main_form_navigation">
+		 				<div id="tab_register" class="title-form back"><span class="register"><a href="#register" title="">Register</a></span></div>				
+						<div id="tab_sign_in" class="title-form current"><span class="sign_in"><a href="#sign_in" title="">Sign In</a></span></div>	
+					</div>			
+					<div id="tab_sign_in_content" class="content-form">
+						<div>
+							<input id="sign_in_email" class="input_placeholder" type="email" value="" placeholder="Email address" name="sign_in_email"/>
+						</div>
+						<div>
+							<input id="sign_in_pass" type="password" value="" name="sign_in_pass"/>
+						</div>
+						<div>
+							<input id="remember_me_checkbox" type="checkbox" class="styled" name="remember_me" value="1"/>
+							<label for="remember_me_checkbox"> Remember me next time</label>
+						</div>
+						<input class="admin-form-submit orange_button" type="submit" value="Continue"/>
+						<div class="admin_form_link">
+							<span class="forgot_passwd"><a class="tab_link_button" href="#forgot_passwd" title="">Forgot password?</a></span>
+						</div>
+					</div>
+					<div id="tab_register_content"  class="content-form hidden">
+						<div>
+							<input id="register_email" class="input_placeholder" type="email" value="" placeholder="Email address" name="register_email"/>
+						</div>
+						<div>
+							<input id="register_name" type="text" value="" name="register_name"/>
+						</div>
+						<div>
+							<input id="register_remember_me_checkbox" type="checkbox" class="styled" name="remember_me" value="1"/>
+							<label for="register_remember_me_checkbox"> Remember me next time</label>
+						</div>
+						<input class="admin-form-submit orange_button" type="submit" value="Continue"/>
+						<div class="admin_form_link">
+							<span class="sign_in"><a class="tab_link_button" href="#sign_in" title="">Already registered?</a></span>
+						</div>
+					</div>
+					<div class="clear"></div>
+				</form>				
+				<div class="admin-form-separator">
+					<div class="separator">Or</div>
+				</div>
+				<input class="connect_fb" type="button" value="Connect With Facebook"/>
+				<input class="connect_twitter" type="button" value="Connect With Twitter"/>
+			</div>
+		</div>
+		<div class="admin-form-content forgot_passwd_block"> 
+			<div class="admin-form-block">
+	 			<form class="main-form admin-form" action="#">	 
+	 				<div class="main_form_navigation">
+	 					<div id="tab_forgot_passwd" class="title-form current">Forgot Password?</div>	
+	 				</div>							
+					<div id="tab_forgot_passwd_content" class="content-form">
+						<input id="forgot_pass_email" class="input_placeholder" type="email" value="" placeholder="Email address" name="forgot_pass_email"/>
+						<div id="forgot_pass_text"> We will send you the password in few minutes.</div>
+						<input class="admin-form-submit orange_button" type="submit" value="Continue"/>
+						<div class="admin_form_link">
+							<span class="sign_in"><a class="tab_link_button" href="#sign_in" title="">Sign In</a></span>
+						</div>
+					</div>
+					<div class="clear"></div>
+				</form>
+			</div>
+		</div>
+		<script type="text/javascript" src="js/jquery-1.11.3.min.js"></script>
+		<script type="text/javascript" src="js/jquery-migrate-1.2.1.min.js"></script>
+		<script type="text/javascript" src="js/jquery-ui.js"></script>			
+		<!--[if IE]>
+		<script type="text/javascript" src="js/placeholder_ie.js"></script>
+		<![endif]-->
+		<script type="text/javascript" src="js/jquery.slider.min.js"></script>
+		<script type="text/javascript" src="js/custom-form-elements.js"></script>
+		<script type="text/javascript" src="js/jquery.selectbox-0.2.min.js"></script>
+		<script type="text/javascript" src="js/script.js"></script>
+	</body>
+</html>

@@ -1,0 +1,447 @@
+<!DOCTYPE html>
+<html lang="en-US">
+	<head>
+		<title>Locadora Web</title>
+		<link rel="shortcut icon" type="image/x-icon" href="images/favicon.ico" />
+		<meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link rel="stylesheet" href="css/jquery-ui.css" type="text/css" media="all" />		
+		<link rel="stylesheet" href="css/style.css" type="text/css" media="all" />
+		<link rel="stylesheet" href="css/jquery.slider.min.css" />	
+		<!--[if IE]>
+		<script type="text/javascript" src="js/html5.js"></script>
+		<link rel="stylesheet" id="stylesheet-ie" href="css/css_ie.css" type="text/css" media="all" />
+		<![endif]-->
+	</head>
+	<body class="page page-two-column">
+		<div id="conteiner">
+			<div id="branding">
+				<div id="branding-content">
+					<div class="menus">
+									
+					</div>
+					<div class="title-content">
+						<a href="index.html" title="">
+							<img class="site-logo" src="images/thumb.png" alt="" />
+							<span class="site-title">LocWEB</span>
+							<h1 class="site-title">&nbsp;</h1>
+						</a>								
+					</div>
+					<div class="access-content">
+						<label for="menu-icon" class="menu-icon"><img src="images/menu.png" alt="menu" /></label>
+						<input type="checkbox" id="menu-icon" value="1" />					
+						<ul>
+							<li class="menu-close">
+								<span>&#10006;</span>
+							</li>
+							<li class="current_page_item menu-item-has-children">
+								<a href="index.html" title="">Home</a>
+								<ul class="children">
+									<li class="current_page_item"><a href="index.html" title="">Consultar</a></li>								
+							  </ul>
+							</li>
+							<li class="menu-item-has-children">
+								<a href="#" title="">Paginas</a>
+								<ul class="children">
+									<li><a href="escolher.html" title="">Escolher Carro</a></li>
+									<li><a href="detalhes.html" title="">Outras Opções</a></li>
+									<li><a href="relatorios.html" title="">Relatórios</a></li>
+								</ul>
+							</li>							
+					  </ul>
+					</div><!-- .access -->					
+					<div class="member">
+						<span class="sign_in"><a class="sign_button tab_link_button" href="#sign_in" title="">Login</a></span>
+						<span class="register"><a class="sign_button tab_link_button" href="#register" title="">Registrar</a></span>
+					</div>
+				</div><!-- #branding-content -->
+				<div class="clear"></div>
+			</div><!-- #branding -->
+			<div id="progress-bar">
+				<div id="progress-bar-steps">
+					<div class="progress-bar-step done">
+						<div class="step_number">1</div>
+						<div class="step_name">Consultar</div>
+						<div class="clear"></div>
+					</div>
+					<div class="progress-bar-step current">
+						<div class="step_number">2</div>
+						<div class="step_name">Escolher</div>
+						<div class="clear"></div>
+					</div>
+					<div class="progress-bar-step">
+						<div class="step_number">3</div>
+						<div class="step_name">Detalhes</div>
+						<div class="clear"></div>
+					</div>
+					<div class="progress-bar-step">
+						<div class="step_number">4</div>
+						<div class="step_name">Confirmar</div>
+						<div class="clear"></div>
+					</div>
+				</div>
+				<div class="clear"></div>
+			</div>				
+			<div id="main">
+				<form id="slider-form" action="escolher.html" class="main-form">		
+					<div id="book_car" class="title-form current">
+						<span>
+							<img src="images/search.png" alt="" />
+							Pesquisar carro:
+						</span>
+					</div>
+					<div id="book_car_content" class="content-form ">
+						<div class="location-block">
+							<div class="form-block location"></div>
+							<div class="form-block airport_codes"></div>
+							<input class="location" type="text" value="" placeholder="Digite aeroporto, cidade ou codigo postal" name="location"/>
+							<input id="location-checkbox" type="checkbox" class="styled" name="checkbox_location" value="1"/>
+							<label for="location-checkbox"> Retorno difente</label>
+							<div class="location-block return_location">
+								<div class="form-block location"> de retorno</div>
+								<input class="location" type="text" value="" placeholder="Digite aeroporto, cidade ou codigo postal" name="return_location"/>
+							</div>
+						</div>
+						<div class="form-block pick-datetime">
+							<div class="form-block pick-up">
+								<h4>Inicio</h4>
+								<input class="datepicker" type="date" value="" name="data_from"/>
+								<input class="time-select" type="time" size="5" value="" name="time_from"/>
+								<div class="clear"></div>	
+							</div>							
+							<div class="form-block drop-off">
+								<h4>Fim</h4>
+								<input class="datepicker" type="date" name="data_to" value=""/>
+								<input class="time-select" type="time" size="5" value="" name="time_to"/>
+								<div class="clear"></div>			
+							</div>
+						</div>
+						<div class="form-block car-type">
+							<h4>Car type</h4>
+							<div class="car-type-select">
+								<select class="select" name="select_cartype"> 
+									<option selected="selected" >Padrão</option>
+									<option>Mini</option>
+								</select>
+							</div>
+						</div>
+						<div class="form-block form-submit">
+							<input class="orange_button form-update" type="submit" value="Buscar"/>
+						</div>
+						<div class="clear"></div>
+					</div>					
+					<div class="clear"></div>
+				</form>	
+				<div id="primary">
+					<aside id="secondary" class="sidebar-left">	
+						<div class="widget info_widget">
+							<h3 class="widget-title">
+								<img src="images/info.png" alt="" />
+								Info
+							</h3>
+							<div class="widget-content"><strong>Nota: </strong> Os veículos mostrados são exemplos. modelos específicos dentro de uma classe de carro pode variar em disponibilidade e recursos, tais como assentos de passageiros, capacidade de bagagem e quilometragem.</div>
+						</div>
+						<div class="widget filter_widget">
+							<h3 class="widget-title">
+								<img src="images/filter_results.png" alt="" />
+								Filtros
+							</h3>
+							<h4>Preço</h4>
+							<div class="widget-content-range">								
+								<input class="price_range" value="250;1000" name="price_range" />
+							</div>
+							<h4>Marcas</h4>
+							<div class="widget-content widget-filter">									
+								<div class="filter">
+									<input id="manufacturers_ford" type="checkbox" class="styled" name="manufacturers_ford" value="1"/> 
+									<label for="manufacturers_ford">Ford</label> 
+									<div class="filter_quantity">1</div>
+								</div>
+								<div class="filter">
+									<input id="manufacturers_reno" type="checkbox" class="styled" name="manufacturers_reno" value="1"/> 
+									<label for="manufacturers_reno">Reno</label> 
+									<div class="filter_quantity">3</div>
+								</div>
+								<div class="filter">
+									<input id="manufacturers_toyota" type="checkbox" class="styled" name="manufacturers_toyota" value="1"/> 
+									<label for="manufacturers_toyota">Toyota</label> 
+									<div class="filter_quantity">1</div>
+								</div>
+								<div class="filter">
+									<input id="manufacturers_chevrolet" type="checkbox" class="styled" name="manufacturers_chevrolet" value="1"/> 
+									<label for="manufacturers_chevrolet">Chevrolet</label> 
+									<div class="filter_quantity">1</div>
+								</div>
+								<div class="filter">
+									<input id="manufacturers_bmw" type="checkbox" class="styled" name="manufacturers_bmw" value="1"/> 
+									<label for="manufacturers_bmw">BMW</label> 
+									<div class="filter_quantity">17</div>
+								</div>
+							</div>
+							<h4>Passageiros</h4>
+							<div class="widget-content-range">								
+								<input class="passangers_range" value="1;5" name="passangers_range" />
+							</div>
+							<h4>Tipo de Veiculo</h4>
+							<div class="widget-content widget-filter">
+								<div class="filter">
+									<input id="type_economy" type="checkbox" class="styled" name="type_economy" value="1"/> 
+									<label for="type_economy">Econômico</label> 
+									<div class="filter_quantity">1</div>
+								</div>
+								<div class="filter">
+									<input id="type_compact" type="checkbox" class="styled" name="type_compact" value="1"/> 
+									<label for="type_compact">Compacto</label> 
+									<div class="filter_quantity">1</div>
+								</div>
+								<div class="filter">
+									<input id="type_intermediate" type="checkbox" class="styled" name="type_intermediate" value="1"/> 
+									<label for="type_intermediate">Intemediario</label> 
+									<div class="filter_quantity">1</div>
+								</div>
+								<div class="filter">
+									<input id="type_sport" type="checkbox" class="styled" name="type_sport" value="1"/> 
+									<label for="type_sport">Sport</label> 
+									<div class="filter_quantity">2</div>
+								</div>
+							</div>
+						</div>															
+					</aside>
+					<div id="content" class="sidebar-middle">
+						<div class="widget main-widget product-widget">
+							<div class="content-overlay">
+								<img class="ajax-loader" src="images/ajax-loader.gif" alt="" />
+							</div>
+							<form action="detalhes.html">
+								<div class="widget-title">
+									<div>
+										<img src="images/list.png" alt="" />
+										Resultados <span>(10 from 24)</span>
+									</div>
+									<div class="widget-title-sort"><span class="viev-all">Ordernado por: </span> <a href="#" title="" class="current">Preço</a> | <a href="#" title="">Tipo</a></div>
+									<div class="clear"></div>	
+								</div>
+								<div class="post">
+									<div class="main-block_container">
+										<div class="main-block">									
+											<div class="product-img">
+												<img src="images/product-3.png" alt="" />
+											</div>
+											<div class="product-info">
+												<h3 class="entry-format">Ford Escape <span>|  Economico</span> <span class="top-seller">Top</span></h3>
+												<div class="features">
+													<p><img src="images/passenger-icon.png" alt="" /> 5 passageiros</p>
+													<p><img src="images/suitcase-icon.png" alt="" /> 3 grandes malas, 2 pequena mala</p>
+													<p><img src="images/transmission-icon.png" alt="" /> transmissão automática</p>
+													<p><img src="images/air-icon.png" alt="" /> ar-condicionado</p>
+													<p><img src="images/km_l-icon.png" alt="" /> 9 km/l</p>						
+												</div>
+												<div class="details">
+													<div class="view-details">[+] Ver detalhes do carro</div>
+													<div class="close-details">[-] Fechar detalhes do carro</div>
+													<ul class="details-more">
+														<li>sistema de rádio / CD 6 altofalantes</li>
+														<li>Escaro black fabric</li>
+														<li>Visor Sistema Híbrido</li>
+														<li>Controle de Estabilidade do Veículo</li>
+														<li>Hill-start Assist Control</li>										
+													</ul>
+												</div>
+											</div>								
+										</div>
+										<div class="additional-block">
+											<div>
+												<p>R$ 299.00</p>
+												<p class="span">milhas grátis incluído</p>
+												<input class="continue_button blue_button" type="submit" value="Selecionar" />
+											</div>
+										</div>
+										<div class="clear"></div>							
+									</div>
+								</div>
+								<div class="post-delimiter"></div>
+								<div class="post">
+									<div class="main-block_container">
+										<div class="main-block">									
+											<div class="product-img">
+												<img src="images/product-2.png" alt="" />
+											</div>
+											<div class="product-info">
+												<h3 class="entry-format">Chevy Aveo <span>|  Compact</span></h3>
+												<div class="features">
+													<p><img src="images/passenger-icon.png" alt="" /> 5 passageiros</p>
+													<p><img src="images/suitcase-icon.png" alt="" /> 1 large suitcases, 1 small suitcase</p>
+													<p><img src="images/transmission-icon.png" alt="" /> transmissão automática</p>
+													<p><img src="images/air-icon.png" alt="" /> ar-condicionado</p>
+													<p><img src="images/km_l-icon.png" alt="" /> 13 km/l</p>						
+												</div>
+												<div class="details">
+													<div class="view-details">[+] Ver detalhes do carro</div>
+													<div class="close-details">[-] Fechar detalhes do carro</div>
+													<ul class="details-more">
+														<li>sistema de rádio / CD 6 altofalantes</li>
+														<li>Escaro black fabric</li>
+														<li>Visor Sistema Híbrido</li>
+														<li>Controle de Estabilidade do Veículo</li>
+														<li>Hill-start Assist Control</li>										
+													</ul>
+												</div>
+											</div>								
+										</div>
+										<div class="additional-block">
+											<div>
+												<p>R$ 360.99</p>
+												<p class="span">milhas grátis incluído</p>
+												<input class="continue_button blue_button" type="submit" value="Selecionar" />
+											</div>
+										</div>
+										<div class="clear"></div>						
+									</div>									
+								</div>
+								<div class="post-delimiter"></div>	
+								<div class="post">
+									<div class="main-block_container">
+										<div class="main-block">									
+											<div class="product-img">
+												<img src="images/product-1.png" alt="" />
+											</div>
+											<div class="product-info">
+												<h3 class="entry-format">Toyota Corolla <span>|  Intermediario</span></h3>
+												<div class="features">
+													<p><img src="images/passenger-icon.png" alt="" /> 5 passageiros</p>
+													<p><img src="images/suitcase-icon.png" alt="" /> 2 large suitcases, 1 small suitcase</p>
+													<p><img src="images/transmission-icon.png" alt="" /> transmissão automática</p>
+													<p><img src="images/air-icon.png" alt="" /> ar-condicionado</p>
+													<p><img src="images/km_l-icon.png" alt="" /> 14 km/l</p>						
+												</div>
+												<div class="details">
+													<div class="view-details">[+] Ver detalhes do carro</div>
+													<div class="close-details">[-] Fechar detalhes do carro</div>
+													<ul class="details-more">
+														<li>sistema de rádio / CD 6 altofalantes</li>
+														<li>Escaro black fabric</li>
+														<li>Visor Sistema Híbrido</li>
+														<li>Controle de Estabilidade do Veículo</li>
+														<li>Hill-start Assist Control</li>										
+													</ul>
+												</div>
+											</div>								
+										</div>
+										<div class="additional-block">
+											<div>
+												<p>R$ 845.25</p>
+												<p class="span">milhas grátis incluído</p>
+												<input class="continue_button blue_button" type="submit" value="Selecionar" />
+											</div>
+										</div>
+										<div class="clear"></div>						
+									</div>
+								</div>
+							</form>							
+						</div>
+						<div class="pagination-block">
+							<div class="pagination">
+								<div class="left"></div>
+								<div class="current">1</div>
+								<div>2</div>
+								<div>3</div>
+								<div>...</div>
+								<div>10</div>
+								<div class="right"></div>
+								<p class="clear"></p>
+							</div>
+						</div>
+					</div>								
+					<div class="clear"></div>
+				</div>	
+			</div>
+			<div class="clear"></div>
+			<footer id="footer">			
+				<div id="footer-menu"><!-- .footer-content -->
+				</div>
+				<div id="footer-content">
+					<img class="site-logo" src="images/thumb.png" alt="" />
+					<h1 class="site-title">LocWEB</h1>			
+					<div class="company-name">LocWEB Unifor.br</div>
+				</div><!-- #footer-content -->
+			</footer><!--end:footer-->
+		</div><!--end:conteiner-->
+		<div id="overlay_block"></div>
+		<div class="admin-form-content sign_register_block">
+			<div class="admin-form-block">
+	 			<form class="main-form admin-form" action="#">	
+	 				<div class="main_form_navigation">
+		 				<div id="tab_register" class="title-form back"><span class="register"><a href="#register" title="">Register</a></span></div>				
+						<div id="tab_sign_in" class="title-form current"><span class="sign_in"><a href="#sign_in" title="">Sign In</a></span></div>	
+					</div>			
+					<div id="tab_sign_in_content" class="content-form">
+						<div>
+							<input id="sign_in_email" class="input_placeholder" type="email" value="" placeholder="Email address" name="sign_in_email"/>
+						</div>
+						<div>
+							<input id="sign_in_pass" type="password" value="" name="sign_in_pass"/>
+						</div>
+						<div>
+							<input id="remember_me_checkbox" type="checkbox" class="styled" name="remember_me" value="1"/>
+							<label for="remember_me_checkbox"> Remember me next time</label>
+						</div>
+						<input class="admin-form-submit orange_button" type="submit" value="Continue"/>
+						<div class="admin_form_link">
+							<span class="forgot_passwd"><a class="tab_link_button" href="#forgot_passwd" title="">Forgot password?</a></span>
+						</div>
+					</div>
+					<div id="tab_register_content"  class="content-form hidden">
+						<div>
+							<input id="register_email" class="input_placeholder" type="email" value="" placeholder="Email address" name="register_email"/>
+						</div>
+						<div>
+							<input id="register_name" type="text" value="" name="register_name"/>
+						</div>
+						<div>
+							<input id="register_remember_me_checkbox" type="checkbox" class="styled" name="remember_me" value="1"/>
+							<label for="register_remember_me_checkbox"> Remember me next time</label>
+						</div>
+						<input class="admin-form-submit orange_button" type="submit" value="Continue"/>
+						<div class="admin_form_link">
+							<span class="sign_in"><a class="tab_link_button" href="#sign_in" title="">Already registered?</a></span>
+						</div>
+					</div>
+					<div class="clear"></div>
+				</form>				
+				<div class="admin-form-separator">
+					<div class="separator">Or</div>
+				</div>
+				<input class="connect_fb" type="button" value="Connect With Facebook"/>
+				<input class="connect_twitter" type="button" value="Connect With Twitter"/>
+			</div>
+		</div>
+		<div class="admin-form-content forgot_passwd_block"> 
+			<div class="admin-form-block">
+	 			<form class="main-form admin-form" action="#">	 
+	 				<div class="main_form_navigation">
+	 					<div id="tab_forgot_passwd" class="title-form current">Forgot Password?</div>	
+	 				</div>							
+					<div id="tab_forgot_passwd_content" class="content-form">
+						<input id="forgot_pass_email" class="input_placeholder" type="email" value="" placeholder="Email address" name="forgot_pass_email"/>
+						<div id="forgot_pass_text"> We will send you the password in few minutes.</div>
+						<input class="admin-form-submit orange_button" type="submit" value="Continue"/>
+						<div class="admin_form_link">
+							<span class="sign_in"><a class="tab_link_button" href="#sign_in" title="">Sign In</a></span>
+						</div>
+					</div>
+					<div class="clear"></div>
+				</form>
+			</div>
+		</div>
+		<script type="text/javascript" src="js/jquery-1.11.3.min.js"></script>
+		<script type="text/javascript" src="js/jquery-migrate-1.2.1.min.js"></script>
+		<script type="text/javascript" src="js/jquery-ui.js"></script>			
+		<!--[if IE]>
+		<script type="text/javascript" src="js/placeholder_ie.js"></script>
+		<![endif]-->
+		<script type="text/javascript" src="js/jquery.slider.min.js"></script>
+		<script type="text/javascript" src="js/custom-form-elements.js"></script>
+		<script type="text/javascript" src="js/jquery.selectbox-0.2.min.js"></script>
+		<script type="text/javascript" src="js/script.js"></script>
+	</body>
+</html>
