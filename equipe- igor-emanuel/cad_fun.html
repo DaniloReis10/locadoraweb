@@ -40,7 +40,7 @@
 		<div class="container form-signup">
 			<i id="signup-icon" class="fa fa-user-plus fa-4x"></i>
 			<h3 id="header-signup"> Novo Colaborador</h3>
-			<form name="client-form" onsubmit="return validateForm()" method="post">
+			<form name="client-form" onsubmit="return checkPWD()">
 				<div class="row">
 					<p class="form-content">Nome*</p>
 					<input type="text" required oninvalid="this.setCustomValidity('Nome inválido')" oninput="setCustomValidity('')" pattern=".{1,}[a-zA-Z]+" required title="Nome inválido" name="name" class="form-input" />
@@ -48,10 +48,16 @@
 					<input type="text" oninvalid="this.setCustomValidity('Sobrenome inválido')" oninput="setCustomValidity('')" pattern=".{1,}[a-zA-Z]+" required title="Sobrenome inválido" name="last-name" class="form-input" />
 					<p class="form-content">Data de Nascimento*</p>
 					<input type="text" oninvalid="this.setCustomValidity('Data inválida')" oninput="setCustomValidity('')" pattern="\d{1,2}/\d{1,2}/\d{4}" required title="Data inválida" class="datepicker form-input" name="date" />
-					<p class="form-content">CPF*</p>
-					<input type="text" oninvalid="this.setCustomValidity('CPF inválido')" oninput="setCustomValidity('')" pattern="\d{11}" required title="CPF inválido" name="cpf" class="form-input" />
-					<p class="form-content">PIS/PASEP*</p>
-					<input type="text" oninvalid="this.setCustomValidity('CPF inválido')" oninput="setCustomValidity('')" pattern="\d{11}" required title="Sobrenome inválido" name="pis" class="form-input" />
+					<p class="form-content"> CPF*</p>
+					<input type="text" oninvalid="this.setCustomValidity('Formato de CPF inválido')" oninput="setCustomValidity('')" pattern="\d{3}\d{3}\d{3}\d{2}" required title="Formato de CPF inválido" name="cpf" class="form-input" />
+					<p class="form-content"> PIS/PASSEP*</p>
+					<input type="text" oninvalid="this.setCustomValidity('Formato de PIS inválido')" oninput="setCustomValidity('')" pattern="\d{3}\d{3}\d{3}\d{2}" required title="Formato de PIS inválido" name="pis" class="form-input" />
+					<p class="form-content">Gênero*</p>
+					<select id="sex-selector" required="" class="form-input" name="sex">
+						<option value="">Selecione o sexo</option>
+						<option value="man">Masculino</option>
+						<option value="fem">Feminino</option>
+					</select>
 					<p class="form-content">Departamento*</p>
 					<select id="dpt-selector" required="" class="form-input" name="dpt">
 						<option value="">Selecione o Departamento</option>
@@ -60,80 +66,42 @@
 						<option value="vend">Vendas</option>
 						<option value="manu">Manutenção</option>
 					</select>
-					<p class="form-content">Gênero*</p>
-					<select id="sex-selector" required="" class="form-input" name="sex">
-						<option value="">Selecione o Gênero</option>
-						<option value="masc">Masculino</option>
-						<option value="fem">Feminino</option>
-					</select>
 					<p class="form-content">Senha*</p>
 					<input type="password" oninvalid="this.setCustomValidity('Mínimo de 6 carácteres')" oninput="setCustomValidity('')" pattern=".{5,}[a-zA-Z|0-9]+" required title="Mínimo de 6 carácteres" name="pwd" class="form-input" />
 					<p class="form-content">Digite novamente sua senha*</p>
-					<input type="password" oninvalid="this.setCustomValidity('Mínimo de 6 carácteres')" oninput="setCustomValidity('')" pattern=".{5,}[a-zA-Z|0-9]+" required title="Mínimo de 6 carácteres" name="pwd-conf" class="form-input" />
+					<input type="password" name="pwd-conf" required class="form-input" />
 
 				</div>
 				<div class="row">
-					<div class="col-md-6 center-col">
+					<div class="col-sm-4 center-col">
+						<p class="form-content">CEP:*</p>
+						<input type="text" required oninvalid="this.setCustomValidity('CEP inválido')" oninput="setCustomValidity('')" pattern="\d{5}-\d{3}" onblur="checkCode(this.value);" required title="CEP inválido" name="zipcode" class="form-input" />
+					</div>
+					<div class="col-sm-3 center-col">
 						<p class="form-content">Estado*</p>
-						<select id="state-selector" class="form-input" required="" name="state">
-							<option value="">Selecione o Estado</option>
-							<option value="AC">AC</option>
-							<option value="AL">AL</option>
-							<option value="AM">AM</option>
-							<option value="AP">AP</option>
-							<option value="BA">BA</option>
-							<option value="CE">CE</option>
-							<option value="DF">DF</option>
-							<option value="ES">ES</option>
-							<option value="GO">GO</option>
-							<option value="MA">MA</option>
-							<option value="MG">MG</option>
-							<option value="MS">MS</option>
-							<option value="MT">MT</option>
-							<option value="PA">PA</option>
-							<option value="PB">PB</option>
-							<option value="PE">PE</option>
-							<option value="PI">PI</option>
-							<option value="PR">PR</option>
-							<option value="RJ">RJ</option>
-							<option value="RN">RN</option>
-							<option value="RO">RO</option>
-							<option value="RR">RR</option>
-							<option value="RS">RS</option>
-							<option value="SC">SC</option>
-							<option value="SE">SE</option>
-							<option value="SP">SP</option>
-							<option value="TO">TO</option>
-						</select>
+						<input type="text" class="form-input" id="state" disabled />
 					</div>
-					<div class="col-sm-5 center-col">
+					<div class="col-sm-4 center-col">
 						<p class="form-content">Cidade*</p>
-						<select id="city-selector" class="form-input">
-							<option value="Selecione a Cidade">Selecione a Cidade</option>
-						</select>
+						<input type="text" class="form-input" id="city" disabled />
 					</div>
 				</div>
 				<div class="row">
-					<div class="col-md-6 center-col">
+					<div class="col-sm-4 center-col">
 						<p class="form-content">Rua*</p>
-						<input type="text" required oninvalid="this.setCustomValidity('Nome inválido')" oninput="setCustomValidity('')" pattern=".{4,}[a-zA-Z]+" required title="Nome inválido" name="street" class="form-input" />
+						<input type="text" id="street" required oninvalid="this.setCustomValidity('Nome inválido')" oninput="setCustomValidity('')" pattern=".{4,}[a-zA-Z]+" required title="Nome inválido" name="street" class="form-input" />
 					</div>
-					<div class="col-sm-5 center-col">
+					<div class="col-sm-4 center-col">
 						<p class="form-content">Bairro:*</p>
-						<input type="text" required oninvalid="this.setCustomValidity('Nome inválido')" oninput="setCustomValidity('')" pattern=".{4,}[a-zA-Z]+" required title="Nome inválido" name="area" class="form-input" />
+						<input type="text" id="area" required oninvalid="this.setCustomValidity('Nome inválido')" oninput="setCustomValidity('')" pattern=".{4,}[a-zA-Z]+" required title="Nome inválido" name="area" class="form-input" />
 					</div>
-				</div>
-				<div class="row">
-					<div class="col-md-6 center-col">
+					<div class="col-sm-3 center-col">
 						<p class="form-content">Número*</p>
 						<input type="text" required oninvalid="this.setCustomValidity('Número inválido')" oninput="setCustomValidity('')" pattern=".{3,3}[0-9]+" required title="Número inválido" name="number" class="form-input" />
 					</div>
-					<div class="col-sm-5 center-col">
-						<p class="form-content">CEP:*</p>
-						<input type="text" required oninvalid="this.setCustomValidity('Formato de CEP inválido')" oninput="setCustomValidity('')" pattern="\d{5}-\d{3}" required title="Formato de CEP inválido" name="zipcode" class="form-input" />
-					</div>
+
 				</div>
-				<input type="submit" class="btn" id="button" value="Criar minha conta"></input>
+				<input type="submit" class="btn" id="button" value="Registrar Colaborador"></input>
 
 			</form>
 		</div>

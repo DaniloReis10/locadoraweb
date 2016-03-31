@@ -14,7 +14,7 @@
 	<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
 
 </head>
-<script type="text/javascript" src="cad_cliente.js"></script>
+<script type="text/javascript" src="js/cad_cliente.js"></script>
 
 <body>
 	<div class="container-fluid">
@@ -62,65 +62,33 @@
 
 				</div>
 				<div class="row">
-					<div class="col-md-6 center-col">
-						<p class="form-content">Estado*</p>
-						<select id="state-selector" class="form-input" required="" name="state">
-							<option value="">Selecione o Estado</option>
-							<option value="AC">AC</option>
-							<option value="AL">AL</option>
-							<option value="AM">AM</option>
-							<option value="AP">AP</option>
-							<option value="BA">BA</option>
-							<option value="CE">CE</option>
-							<option value="DF">DF</option>
-							<option value="ES">ES</option>
-							<option value="GO">GO</option>
-							<option value="MA">MA</option>
-							<option value="MG">MG</option>
-							<option value="MS">MS</option>
-							<option value="MT">MT</option>
-							<option value="PA">PA</option>
-							<option value="PB">PB</option>
-							<option value="PE">PE</option>
-							<option value="PI">PI</option>
-							<option value="PR">PR</option>
-							<option value="RJ">RJ</option>
-							<option value="RN">RN</option>
-							<option value="RO">RO</option>
-							<option value="RR">RR</option>
-							<option value="RS">RS</option>
-							<option value="SC">SC</option>
-							<option value="SE">SE</option>
-							<option value="SP">SP</option>
-							<option value="TO">TO</option>
-						</select>
-					</div>
-					<div class="col-sm-5 center-col">
-						<p class="form-content">Cidade*</p>
-						<select id="city-selector" class="form-input">
-							<option value="Selecione a Cidade">Selecione a Cidade</option>
-						</select>
-					</div>
-				</div>
-				<div class="row">
-					<div class="col-md-6 center-col">
-						<p class="form-content">Rua*</p>
-						<input type="text" id="street" required oninvalid="this.setCustomValidity('Nome inválido')" oninput="setCustomValidity('')" pattern=".{4,}[a-zA-Z]+" required title="Nome inválido" name="street" class="form-input" />
-					</div>
-					<div class="col-sm-5 center-col">
-						<p class="form-content">Bairro:*</p>
-						<input type="text" id="area" required oninvalid="this.setCustomValidity('Nome inválido')" oninput="setCustomValidity('')" pattern=".{4,}[a-zA-Z]+" required title="Nome inválido" name="area" class="form-input" />
-					</div>
-				</div>
-				<div class="row">
-					<div class="col-md-6 center-col">
-						<p class="form-content">Número*</p>
-						<input type="text" required oninvalid="this.setCustomValidity('Número inválido')" oninput="setCustomValidity('')" pattern=".{3,3}[0-9]+" required title="Número inválido" name="number" class="form-input" />
-					</div>
-					<div class="col-sm-5 center-col">
+					<div class="col-sm-4 center-col">
 						<p class="form-content">CEP:*</p>
 						<input type="text" required oninvalid="this.setCustomValidity('CEP inválido')" oninput="setCustomValidity('')" pattern="\d{5}-\d{3}" onblur="checkCode(this.value);" required title="CEP inválido" name="zipcode" class="form-input" />
 					</div>
+					<div class="col-sm-3 center-col">
+						<p class="form-content">Estado*</p>
+						<input type="text" class="form-input" id="state" disabled />
+					</div>
+					<div class="col-sm-4 center-col">
+						<p class="form-content">Cidade*</p>
+						<input type="text" class="form-input" id="city" disabled />
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-sm-4 center-col">
+						<p class="form-content">Rua*</p>
+						<input type="text" id="street" required oninvalid="this.setCustomValidity('Nome inválido')" oninput="setCustomValidity('')" pattern=".{4,}[a-zA-Z]+" required title="Nome inválido" name="street" class="form-input" />
+					</div>
+					<div class="col-sm-4 center-col">
+						<p class="form-content">Bairro:*</p>
+						<input type="text" id="area" required oninvalid="this.setCustomValidity('Nome inválido')" oninput="setCustomValidity('')" pattern=".{4,}[a-zA-Z]+" required title="Nome inválido" name="area" class="form-input" />
+					</div>
+					<div class="col-sm-3 center-col">
+						<p class="form-content">Número*</p>
+						<input type="text" required oninvalid="this.setCustomValidity('Número inválido')" oninput="setCustomValidity('')" pattern=".{3,3}[0-9]+" required title="Número inválido" name="number" class="form-input" />
+					</div>
+
 				</div>
 				<input type="submit" class="btn" id="button" value="Criar minha conta"></input>
 

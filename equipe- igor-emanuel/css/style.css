@@ -13,6 +13,7 @@ header {
 }
 body {
     background-color: #e7e7e7;
+
 }
 .form-signup {
     width: 30%;
@@ -136,8 +137,9 @@ input:required {
 }
 .footer-index {
     width: 100% !important;
-    bottom: -10em!important;
+    bottom: 0!important;
     position: absolute!important;
+    vertical-align: bottom;
 }
 footer {
     padding: 32px;
