@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="css/jquery-ui.css">
+    <link rel="stylesheet" href="css/jquery-ui.structure.css">
+    <link rel="stylesheet" href="css/jquery-ui.theme.css">
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css"
+          integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+    <script src="js/jquery.js"></script>
+    <script src="js/jquery-ui.min.js"></script>
+    <script src="js/all.js"></script>
+
+    <meta charset="UTF-8">
+    <title>Listagem de veículos</title>
+</head>
+<body>
+<div class="header">
+    <h3>
+        <a href="">LocadoraWeb</a>
+    </h3>
+</div>
+
+<div class="main">
+    <div class="menu">
+        <div id="accordion">
+            <h3>Veículos</h3>
+            <div>
+                <p><a href="novo.html">Novo</a></p>
+                <p><a href="listagem.html">Listagem</a></p>
+            </div>
+            <h3>Aluguel</h3>
+            <div>Controle</div>
+            <h3>Relatórios</h3>
+            <div>Carros</div>
+            <h3>Clientes</h3>
+            <div>Listagem</div>
+        </div>
+    </div>
+    <div class="content">
+        <form role="form">
+            <div class="form-group">
+                <label for="desc">Descrição:</label>
+                <input type="text" class="form-control" id="desc">
+            </div>
+            <div class="form-group">
+                <label for="compra">Data de Compra:</label>
+                <input type="date" class="form-control" id="compra">
+            </div>
+            <div class="form-group">
+                <label for="image">Imagem:</label>
+                <input type="file" class="form-control" id="image">
+            </div>
+            <button type="submit" class="btn btn-default">Criar</button>
+
+        </form>
+    </div>
+</div>
+</body>
+</html>

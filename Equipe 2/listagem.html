@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="css/jquery-ui.css">
+    <link rel="stylesheet" href="css/jquery-ui.structure.css">
+    <link rel="stylesheet" href="css/jquery-ui.theme.css">
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css"
+          integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+    <script src="js/jquery.js"></script>
+    <script src="js/jquery-ui.min.js"></script>
+    <script src="js/all.js"></script>
+
+    <meta charset="UTF-8">
+    <title>Listagem de veículos</title>
+</head>
+<body>
+<div class="header">
+    <h3>
+        <a href="">LocadoraWeb</a>
+    </h3>
+</div>
+
+<div class="main">
+    <div class="menu">
+        <div id="accordion">
+            <h3>Veículos</h3>
+            <div>
+                <p><a href="novo.html">Novo</a></p>
+                <p><a href="listagem.html">Listagem</a></p>
+            </div>
+            <h3>Aluguel</h3>
+            <div>Controle</div>
+            <h3>Relatórios</h3>
+            <div>Carros</div>
+            <h3>Clientes</h3>
+            <div>Listagem</div>
+        </div>
+    </div>
+    <div class="content">
+        <table class="table table-hover table-bordered">
+            <thead>
+                <tr>
+                    <th>#ID</th>
+                    <th>Descrição</th>
+                    <th>Data de Compra</th>
+                    <th>Ações</th>
+                </tr>
+            </thead>
+
+            <tbody>
+                <tr>
+                    <td>1</td>
+                    <td>Fiat Palio 2000 Elx</td>
+                    <td>20/09/2009</td>
+                    <td>
+                        <a href="editar.html" class="editar">Editar</a>
+                        <a href="excluir.html" class="excluir">Excluir</a>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
+</body>
+</html>
