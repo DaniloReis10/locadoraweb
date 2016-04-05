@@ -38,26 +38,87 @@
         </div>
     </div>
     <div class="content">
+        <h3>Lista de veículos</h3><br/>
+
+        <h4>Filtros</h4>
+        <div class="filters">
+            <form method="get">
+                <div class="form-group">
+                    <div class="col-lg-2">
+                        <div class="bs-component">
+                            <select name="criteria" class="form-control" required="required">
+                                <option value="">- Selecione -</option>
+                                <option value="">Descrição</option>
+                                <option value="">Marca</option>
+                                <option value="">Modelo</option>
+                                <option value="">Ano de Fabricação</option>
+                                <option value="">Data de Compra</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="col-lg-2">
+                        <div class="bs-component">
+                            <select name="operator" class="form-control" required="required">
+                                <option value="=">Igual a</option>
+                                <option value="<>">Diferente</option>
+                                <option value="<">Menor que</option>
+                                <option value=">">Maior que</option>
+                                <option value="<=">Menor ou igual a</option>
+                                <option value=">=">Maior ou igual a</option>
+                                <option value="like">Cont&eacute;m</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div class="col-lg-4">
+                            <div class="bs-component">
+                                <input name="value" class="form-control"placeholder="Procurar por" required="required"/>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div class="col-lg-4">
+                            <div class="bs-component">
+                                <button type="submit" class="btn btn-default">Filtar</button>
+                                <button type="button" class="btn btn-default"
+                                        onclick="location.href='listagem.html'">Limpar</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </form>
+        </div>
+
+        <br /><br /><br /><br />
+
         <table class="table table-hover table-bordered">
             <thead>
-                <tr>
-                    <th>#ID</th>
-                    <th>Descrição</th>
-                    <th>Data de Compra</th>
-                    <th>Ações</th>
-                </tr>
+            <tr>
+                <th>#ID</th>
+                <th>Imagem</th>
+                <th>Descrição</th>
+                <th>Marca</th>
+                <th>Modelo</th>
+                <th>Ano de Fabricação</th>
+                <th>Data de Compra</th>
+                <th>Ações</th>
+            </tr>
             </thead>
 
             <tbody>
-                <tr>
-                    <td>1</td>
-                    <td>Fiat Palio 2000 Elx</td>
-                    <td>20/09/2009</td>
-                    <td>
-                        <a href="editar.html" class="editar">Editar</a>
-                        <a href="excluir.html" class="excluir">Excluir</a>
-                    </td>
-                </tr>
+            <tr>
+                <td>1</td>
+                <td><img src="uploads/palio.jpg" width="100" /></td>
+                <td>Fiat Palio 2000 Elx</td>
+                <td>Fiat</td>
+                <td>Palio</td>
+                <td>2000/2000</td>
+                <td>20/09/2009</td>
+                <td>
+                    <a href="editar.html" class="editar">Editar</a>
+                    <a href="excluir.html" class="excluir">Excluir</a>
+                </td>
+            </tr>
             </tbody>
         </table>
     </div>
