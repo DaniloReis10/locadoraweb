@@ -15,91 +15,90 @@
 
 <body>
 
-    <nav class="navbar navbar-default navbar-fixed-top">
+    <nav class="navbar navbar-default navbar-fixed-top" role="navigation">
         <div class="container">
             <div class="row display-table">
                 <div class="col-xs-12 col-md-8">
-                    <div class="navbar-header navbar-left">
+                    <div class="navbar-header " style="height:50px;">
+                        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse" style="position:relative; margin-top:-20px;top:50%;">
+                            <span class="sr-only">Toggle navigation</span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                        </button>
                         <a class="navbar-brand" href="#">
                             <img alt="nucleus" class="img-responsive" src="Assets/logo.png">
                         </a>
+
                     </div>
 
                 </div>
-                <div class="col-xs-5 col-md-5">
-
-                    <ul class="nav nav-pills navbar-right navbar-fixed">
-                        <li><a class="btn-style" href="#">Cadastre-se</a></li>
-                        <li><a href="#">Home</a></li>
-                        <li><a href="#">Sobre</a></li>
-                        <li><a href="#">Planos</a></li>
-                        <li><a href="#">Contato</a></li>
-                    </ul>
+                <div class="col-xs-5 col-md-8">
+                    <div class="navbar-collapse collapse">
+                        <ul class="nav navbar-nav navbar-right">
+                            <li class="dropdown">
+                                <ul class="nav nav-pills navbar-right navbar-fixed">
+                                    <li><a class="btn-style" href="#">Cadastre-se</a></li>
+                                    <li><a href="#">Home</a></li>
+                                    <li><a href="#">Sobre</a></li>
+                                    <li><a href="#">Planos</a></li>
+                                    <li><a href="#">Contato</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+                    <!--/.nav-collapse -->
                 </div>
             </div>
         </div>
     </nav>
-    <div class="container form-signup">
-        <i id="signup-icon" class="fa fa-user-plus fa-4x"></i>
-        <h3 id="header-signup"> Cadastre-se</h3>
-        <form name="client-form" onsubmit="return checkPWD()">
-            <div class="row">
-                <p class="form-content">Nome*</p>
-                <input type="text" required oninvalid="this.setCustomValidity('Nome inválido')" oninput="setCustomValidity('')" pattern=".{1,}[a-zA-Z]+" required title="Nome inválido" name="name" class="form-input" />
-                <p class="form-content"> Sobrenome*</p>
-                <input type="text" oninvalid="this.setCustomValidity('Sobrenome inválido')" oninput="setCustomValidity('')" pattern=".{1,}[a-zA-Z]+" required title="Sobrenome inválido" name="last-name" class="form-input" />
-                <p class="form-content">Data de Nascimento*</p>
-                <input type="text" oninvalid="this.setCustomValidity('Data inválida')" oninput="setCustomValidity('')" pattern="\d{1,2}/\d{1,2}/\d{4}" required title="Data inválida" class="datepicker form-input" name="date" />
+    <div class="container-fluid form-signup">
 
-                <p class="form-content">Gênero*</p>
-                <select id="sex-selector" required="" class="form-input" name="sex">
-                    <option value="">Selecione o seu sexo</option>
-                    <option value="man">Masculino</option>
-                    <option value="fem">Feminino</option>
-                </select>
-                <p class="form-content">Senha*</p>
-                <input type="password" oninvalid="this.setCustomValidity('Mínimo de 6 carácteres')" oninput="setCustomValidity('')" pattern=".{5,}[a-zA-Z|0-9]+" required title="Mínimo de 6 carácteres" name="pwd" class="form-input" />
-                <p class="form-content">Digite novamente sua senha*</p>
-                <input type="password" name="pwd-conf" required class="form-input" />
 
-            </div>
-            <div class="row">
-                <div class="col-sm-4 center-col">
-                    <p class="form-content">CEP:*</p>
-                    <input type="text" required oninvalid="this.setCustomValidity('CEP inválido')" oninput="setCustomValidity('')" pattern="\d{5}-\d{3}" onblur="checkCode(this.value);" required title="CEP inválido" name="zipcode" class="form-input" />
-                </div>
-                <div class="col-sm-3 center-col">
-                    <p class="form-content">Estado*</p>
-                    <input type="text" class="form-input" id="state" disabled />
-                </div>
-                <div class="col-sm-4 center-col">
-                    <p class="form-content">Cidade*</p>
-                    <input type="text" class="form-input" id="city" disabled />
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-sm-4 center-col">
-                    <p class="form-content">Rua*</p>
-                    <input type="text" id="street" required oninvalid="this.setCustomValidity('Nome inválido')" oninput="setCustomValidity('')" pattern=".{4,}[a-zA-Z]+" required title="Nome inválido" name="street" class="form-input" />
-                </div>
-                <div class="col-sm-4 center-col">
-                    <p class="form-content">Bairro:*</p>
-                    <input type="text" id="area" required oninvalid="this.setCustomValidity('Nome inválido')" oninput="setCustomValidity('')" pattern=".{4,}[a-zA-Z]+" required title="Nome inválido" name="area" class="form-input" />
-                </div>
-                <div class="col-sm-3 center-col">
-                    <p class="form-content">Número*</p>
-                    <input type="text" required oninvalid="this.setCustomValidity('Número inválido')" oninput="setCustomValidity('')" pattern=".{3,3}[0-9]+" required title="Número inválido" name="number" class="form-input" />
-                </div>
+        <div class="thumbnail ">
+            <form name="client-form" onsubmit="return checkPWD()">
+                <div class="row center row">
+                    <div class="col-xs-12 col-md-8 center-col">
+                        <i id="signup-icon" class="fa fa-user-plus fa-4x img-responsive" style="width:auto; margin-top:32px;"></i>
+                        <h3> Cadastre-se</h3>
+                        <p class="form-content">Nome*</p>
+                        <input type="text" required oninvalid="this.setCustomValidity('Nome inválido')" oninput="setCustomValidity('')" pattern=".{1,}[a-zA-Z]+" required title="Nome inválido" name="name" class="form-input" />
+                        <p class="form-content"> Sobrenome*</p>
+                        <input type="text" oninvalid="this.setCustomValidity('Sobrenome inválido')" oninput="setCustomValidity('')" pattern=".{1,}[a-zA-Z]+" required title="Sobrenome inválido" name="last-name" class="form-input" />
+                        <p class="form-content">Data de Nascimento*</p>
+                        <input type="text" oninvalid="this.setCustomValidity('Data inválida')" oninput="setCustomValidity('')" pattern="\d{1,2}/\d{1,2}/\d{4}" required title="Data inválida" class="datepicker form-input" name="date" />
+
+                        <p class="form-content">Gênero*</p>
+                        <select id="sex-selector" required="" class="form-input" name="sex">
+                            <option value="">Selecione o seu sexo</option>
+                            <option value="man">Masculino</option>
+                            <option value="fem">Feminino</option>
+                        </select>
+                        <p class="form-content">Senha*</p>
+                        <input type="password" oninvalid="this.setCustomValidity('Mínimo de 6 carácteres')" oninput="setCustomValidity('')" pattern=".{5,}[a-zA-Z|0-9]+" required title="Mínimo de 6 carácteres" name="pwd" class="form-input" />
+                        <p class="form-content">Digite novamente sua senha*</p>
+                        <input type="password" name="pwd-conf" required class="form-input" />
+                        <p class="form-content">CEP:*</p>
+                        <input type="text" required oninvalid="this.setCustomValidity('CEP inválido')" oninput="setCustomValidity('')" pattern="\d{5}-\d{3}" onblur="checkCode(this.value);" required title="CEP inválido" name="zipcode" class="form-input" />
+                        <p class="form-content">Estado*</p>
+                        <input type="text" class="form-input" id="state" disabled />
+                        <p class="form-content">Cidade*</p>
+                        <input type="text" class="form-input" id="city" disabled />
+                        <p class="form-content">Rua*</p>
+                        <input type="text" id="street" required oninvalid="this.setCustomValidity('Nome inválido')" oninput="setCustomValidity('')" pattern=".{4,}[a-zA-Z]+" required title="Nome inválido" name="street" class="form-input" />
+                        <p class="form-content">Bairro:*</p>
+                        <input type="text" id="area" required oninvalid="this.setCustomValidity('Nome inválido')" oninput="setCustomValidity('')" pattern=".{4,}[a-zA-Z]+" required title="Nome inválido" name="area" class="form-input" />
+                         <p class="form-content">Número*</p>
+                        <input type="text" required oninvalid="this.setCustomValidity('Número inválido')" oninput="setCustomValidity('')" pattern=".{3,3}[0-9]+" required title="Número inválido" name="number" class="form-input" />
+                         <input type="submit" class="btn" id="button" value="Criar minha conta"></input>
+                    </div>
+            </form>
 
             </div>
-            <input type="submit" class="btn" id="button" value="Criar minha conta"></input>
 
-        </form>
-    </div>
-
+        </div>
 
     </div>
-
 
     <footer>
         <div class="container">
@@ -127,6 +126,8 @@
             </div>
 
     </footer>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
 </body>
 
 </html>

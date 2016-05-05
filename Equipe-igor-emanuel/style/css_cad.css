@@ -2,7 +2,6 @@
     font-family: "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
 }
 .form-signup {
-    width: 30%;
     text-align: center;
     margin-top: 128px;
     color: #989595;
@@ -27,6 +26,7 @@
     font-weight: normal;
     text-align: left;
 }
+
 #button {
     color: white;
     background: #189a85;
@@ -60,14 +60,12 @@
 }
 .navbar-default {
     background-color: #1b2a3a;
-    border:0px;
+    border: 0px;
 }
-body{
+body {
     background-color: #e7e7e7;
 }
 .main-container {
-
-
     display: flex;
     align-items: center;
 }
@@ -75,50 +73,75 @@ body{
     margin-top: 32px;
     margin-bottom: 32px;
 }
-.thumbnail-cep{
+.thumbnail-cep {
     background: black;
-
     /*filter: alpha(opacity=50);*
     opacity: 0.5;*/
-    background: rgba(0,0,0,0.5);
+    background: rgba(0, 0, 0, 0.5);
     border: transparent;
     min-height: 200px;
 }
-
-ul#cities{
-     list-style-type:square !important;
-     padding: 12px;
+ul#cities {
+    list-style-type: square !important;
+    padding: 12px;
 }
-
-
-ul#cities li{
-     display: inline;
-     margin: 12px;
-     color: white;
-     font-weight: bold;
-}
-#cep-input{
-    height:36px;
+ul#cities li {
+    display: inline;
+    margin: 12px;
+    color: white;
     font-weight: bold;
 }
-#cep-contact{
-
+#cep-input {
+    height: 36px;
+    font-weight: bold;
 }
-#help{
-    color:white;
-    font-weight:bold;
+#cep-contact {}
+#help {
+    color: white;
+    font-weight: bold;
 }
-
-.thumbnail-cep:hover{
+.thumbnail-cep:hover {
     border: transparent;
 }
+.thumbnail {
+    border-width: 4px;
+    width: 50%;
+    margin: 0 auto;
+    margin-top: 32px;
+    margin-bottom: 32px;
+}
+@media (max-width: 768px) {
+    .thumbnail {
+        width: 70%;
+        margin: 0 auto !important;
+    }
+    .form-signup {
+        width: 70%;
+    }
+    .display-table {
+        display: block!important;
+        align-items: center;
+        !important;
+        float: none;
+        !important;
+    }
+    #button{
+        font-size: 1.0em;
+    }
+}
 
-.thumbnail{
-    border-bottom-width: 4px;
+/* Iphone 6 PLus */
+
+@media (max-width: 414px) {
+    .thumbnail {
+        width: 100%;
+        margin: 0 auto !important;
+    }
+    #button{
+        font-size: 1.0em;
+    }
 }
-.thumbnail:hover {
-    border-bottom-color: #18bc9c;
-}
+
 a {
     color: #8a8a8a;
 }
@@ -148,7 +171,13 @@ a:hover {
 }
 .btn-style:hover {
     color: white;
-    background: #0cbe6f!important;
+    background: #1b2a3a!important;
+    border-style:solid;
+    border-width: 1px;
+    border-color:#18bc9c;
+}
+.nav-item:hover{
+    background-color: red;
 }
 footer {
     min-height: 160px;
