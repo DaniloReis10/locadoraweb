@@ -1,0 +1,8 @@
+criterios da avaliação do trabalho
+
+1. Funcionamento de acordo com os requisitos (corretude) (0-3 Pontos)
+2. Arquitetura (Padrâo MVC) (0-2 Pontos)
+3. Uso de tecnologias utilizadas no curso (0-2 Pontos)
+4. Documentação interna do código (javadoc , comentários dentro dos metodos, diagramas de sequencia e classes) (0-1 Pontos)
+5. Utilização da ferramenta de controle de versão (0-1 Pontos)
+6. Usabilidade e facilidade de uso pelo usuário (0-1 Pontos)
