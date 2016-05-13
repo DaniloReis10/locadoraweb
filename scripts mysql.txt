@@ -1,0 +1,80 @@
+## Script de banco Mysql (Retirado do documento)
+
+
+CREATE TABLE Aluguel (
+Movimentacao_Registro int NOT NULL,
+Valor_aluguel int NOT NULL,
+CONSTRAINT Aluguel_pk PRIMARY KEY (Movimentacao_Registro)
+);
+
+CREATE TABLE Clientes (
+ID int NOT NULL AUTO_INCREMENT, Nome varchar(255) NOT NULL,
+Email varchar(255) NOT NULL,
+CPF varchar(14) NOT NULL,
+Endereco varchar(225) NOT NULL, Data_Nascimento date NOT NULL, CONSTRAINT Clientes_pk PRIMARY KEY (ID)
+);
+
+CREATE TABLE Funcionarios (
+Cad int NOT NULL AUTO_INCREMENT,
+Nome varchar(20) NOT NULL,
+CONSTRAINT Funcionarios_pk PRIMARY KEY (Cad)
+);
+
+CREATE TABLE Manutencao_e_Limpeza (
+Movimentacao_Registro int NOT NULL,
+Descricao varchar(255) NOT NULL,
+Orcamento int NOT NULL,
+CONSTRAINT Manutencao_e_Limpeza_pk PRIMARY KEY (Movimentacao_Registro)
+);
+
+CREATE TABLE Movimentacao (
+Registro int NOT NULL,
+Status varchar(20) NOT NULL,
+Funcionarios_Cad int NOT NULL,
+Veiculos_Placa varchar(7) NOT NULL,
+Clientes_ID int NOT NULL,
+Data_Entrada date NOT NULL,
+Data_Saida date NOT NULL,
+CONSTRAINT Movimentacao_pk PRIMARY KEY (Registro)
+);
+
+CREATE TABLE Status (
+Status varchar(20) NOT NULL,
+CONSTRAINT Status_pk PRIMARY KEY (Status) );
+
+CREATE TABLE Veiculos (
+Placa varchar(7) NOT NULL,
+Fabricante varchar(20) NOT NULL,
+Modelo varchar(20) NOT NULL,
+Ano year NOT NULL,
+Nacionalidade varchar(20) NOT NULL,
+Renavan int NOT NULL,
+Cilindradas int NOT NULL,
+Cor varchar(20) NOT NULL,
+Numero_Chassi int NOT NULL,
+Valor_Diaria int NOT NULL,
+Status_atual varchar(20) NOT NULL, CONSTRAINT Veiculos_pk PRIMARY KEY (Placa)
+);
+
+ALTER TABLE Aluguel ADD CONSTRAINT Aluguel_Movimentacao FOREIGN KEY Aluguel_Movimentacao (Movimentacao_Registro)
+REFERENCES Movimentacao (Registro);
+
+ALTER TABLE Manutencao_e_Limpeza ADD CONSTRAINT Manutencao_e_Limpeza_Movimentacao FOREIGN KEY Manutencao_e_Limpeza_Movimentacao (Movimentacao_Registro)
+REFERENCES Movimentacao (Registro);
+
+ALTER TABLE Movimentacao ADD CONSTRAINT Movimentacao_Clientes FOREIGN KEY Movimentacao_Clientes (Clientes_ID)
+REFERENCES Clientes (ID);
+
+ALTER TABLE Movimentacao ADD CONSTRAINT Movimentacao_Funcionarios FOREIGN KEY Movimentacao_Funcionarios (Funcionarios_Cad)
+REFERENCES Funcionarios (Cad);
+
+ALTER TABLE Movimentacao ADD CONSTRAINT Movimentacao_Status FOREIGN KEY Movimentacao_Status (Status)
+REFERENCES Status (Status);
+
+ALTER TABLE Movimentacao ADD CONSTRAINT Movimentacao_Veiculos FOREIGN KEY Movimentacao_Veiculos (Veiculos_Placa)
+REFERENCES Veiculos (Placa);
+
+ALTER TABLE Veiculos ADD CONSTRAINT Veiculos_Status FOREIGN KEY Veiculos_Status (Status_atual)
+REFERENCES Status (Status);
+
+
