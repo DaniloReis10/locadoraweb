@@ -2,6 +2,13 @@
 
 ## Sistema do Curso de Tecnologia de InformaÃ§Ã£o / 2016.1 Unifor
 
+
+###### Projeto Eclipse:
+
+- Abrir Eclipse, escolher a opção: Importar / Git / Projects from Git
+- Pasta do projeto:  Projeto Eclipse/LocadoraWeb
+
+
 ###### Equipe 1:
 
 - Antonio Plinio
