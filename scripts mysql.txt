@@ -78,3 +78,21 @@ ALTER TABLE Veiculos ADD CONSTRAINT Veiculos_Status FOREIGN KEY Veiculos_Status 
 REFERENCES Status (Status);
 
 
+
+insert into Status values ('Disponivel'), ('Locado'),
+('Manutencao'), ('Revisao'), ('Inspecao'), ('Limpeza'), ('Vendido');
+insert into Clientes (Nome, Email, CPF, Endereco, Data_Nascimento) values
+('Friedrich','Friedrich@abc.com','111.222.333­12','Rua: 23','1993­10­20'), ('Maria','Maria@abc.com','222.222.222­12','Rua: 23','1978­12­25'), ('Newton','Newton@abc.com','344.443.444­00','Rua: 23','1986­06­03'), ('Albert','Albert@abc.com','676.776.454­08','Rua: 23','1975­01­01');
+insert into Veiculos values ('1234ABC','Fiat','Palio','2008','BRA',123123,1000,'Preto',51248568,100,'Disponivel'), ('6548ESD','Toyota','Hilux','2016','JAP',568412,2000,'Prata',42548585,500,'Locado'), ('7090DGT','VolksWagen','Fusca Itamar','1996','BRA',000142,1000,'Branco',25842574,50,'Disponivel'), ('6587RDT','Hyundai','HB20','2015','KOR',543298,2000,'Fosco',25625852,600,'Locado'), ('1245YUT','VolksWagen','Brasilia','1980','BRA',842517,1000,'Amarela',51478545,50,'Manut encao'), ('0012EDS','VolksWagen','Gol','2014','BRA',415286,1600,'Azul',36587458,150,'Vendido'), ('1212GTY','Citroen','C3','2014','FRA',856254,1800,'Vermelho',12548524,400,'Disponivel');
+insert into Funcionarios (Nome) values ('Joao'),
+('Pedro'),
+('Mariana'),
+('Alberto'), ('Carminha'), ('Hashimi');
+insert into Movimentacao values (00123,'Locado',1,'1245YUT',1,'2014­10­30','2014­11­07'), (00125,'Locado',3,'1234ABC',2,'2014­11­05','2014­11­12'), (00128,'Inspecao',2,'1245YUT',1,'2014­11­07','2014­11­07'), (00129,'Disponivel',6,'1245YUT',1,'2014­11­07','2015­02­03'), (00134,'Inspecao',1,'1234ABC',2,'2014­11­12','2014­11­12'), (00135,'Manutencao',4,'1234ABC',2,'2014­11­12','2014­11­21'), (00137,'Disponivel',2,'1234ABC',2,'2014­11­21','2014­12­20'), (00143,'Locado',5,'6587RDT',3,'2015­01­27','2015­02­28'), (00171,'Inspecao',2,'6587RDT',3,'2015­02­28','2015­03­01'),
+(00172,'Limpeza',4,'6587RDT',3,'2015­03­01','2015­03­02'), (00176,'Disponivel',3,'6587RDT',3,'2015­03­02','2015­04­10'), (00210,'Vendido',3,'1212GTY',4,'2015­08­30','2015­08­30'), (00216,'Locado',2,'6548ESD',3,'2015­10­15','2015­10­25'), (00346,'Manutencao',4,'1245YUT',2,'2016­02­15','2016­2­25'), (00344,'Locado',3,'6548ESD',2,'2016­01­01','2016­01­06');
+insert into Aluguel values (00123,400),(00125,700),(00143,19200),(00216,5000), (00344,2500);
+insert into Manutencao_e_Limpeza values (00135,'Defeito no motor',200), (00172,'Limpeza completa',120),
+(00346,'Problema Eletrico',120);
+
+
+
