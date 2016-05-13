@@ -1,0 +1,8 @@
+Pessoal criei um banco de dados na nuvem para criar a conexao segue os dados
+
+Server: sql5.freemysqlhosting.net
+Name: sql5119291
+Username: sql5119291
+Password: eVDmUsrpNp
+Port number: 3306
+
