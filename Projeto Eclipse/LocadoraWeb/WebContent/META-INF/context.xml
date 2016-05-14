@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Context>
+    <Resource name="jdbc/albums"
+        auth="Container"
+        driverClassName="com.mysql.jdbc.Driver"
+        type="javax.sql.DataSource"
+        username="sql5119291"
+        password="eVDmUsrpNp"
+        url="jdbc:mysql://sql5.freemysqlhosting.net:3306/sql5119291"/>
+</Context>
