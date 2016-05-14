@@ -5,14 +5,14 @@
 
 ###### Projeto Eclipse:
 
-- Abrir Eclipse, escolher a op��o: Importar / Git / Projects from Git
+- Abrir Eclipse, escolher a opção: Importar / Git / Projects from Git
 - Pasta do projeto:  Projeto Eclipse/LocadoraWeb
 
 
 ###### Equipe 1:
 
 - Antonio Plinio
-- Felipe José
+- Felipe JosÃ©
 - Matheus Vasconcelos
   
 Funcionalidade:
@@ -21,8 +21,8 @@ Funcionalidade:
 
 ###### Equipe 2:
 
-- Leonel Camurça
-- Joâo Vidal
+- Leonel CamurÃ§a
+- JoÃ¢o Vidal
 
 Funcionalidade:
 
@@ -37,7 +37,7 @@ Funcionalidade:
 Funcionalidade:
   
 > - Consulta de carros
-> - Historico locação
+> - Historico locaÃ§Ã£o
 
 ###### Equipe 4:
 
@@ -55,12 +55,12 @@ Lucas dos Santos Brito
 
 Funcionalidade
 
-> - Relatórios ( Faturamento / Modelos mais alugados / Ticket médio/ Tempo médio)
+> - RelatÃ³rios ( Faturamento / Modelos mais alugados / Ticket mÃ©dio/ Tempo mÃ©dio)
 
 
 # Softwares 
 
-Sugestão de Softwares para criação das telas do sistema (Open source)
+SugestÃ£o de Softwares para criaÃ§Ã£o das telas do sistema (Open source)
 
 
 Pencil
@@ -71,7 +71,7 @@ Balsamiq Mockups
 
 	https://balsamiq.com/     
     
-Napkee (Geração de código CSS/HTML)
+Napkee (GeraÃ§Ã£o de cÃ³digo CSS/HTML)
 
 	http://www.napkee.com   
 
