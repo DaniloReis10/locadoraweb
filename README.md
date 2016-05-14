@@ -12,7 +12,7 @@
 ###### Equipe 1:
 
 - Antonio Plinio
-- Felipe JosÃ©
+- Felipe José
 - Matheus Vasconcelos
   
 Funcionalidade:
@@ -21,8 +21,8 @@ Funcionalidade:
 
 ###### Equipe 2:
 
-- Leonel CamurÃ§a
-- JoÃ¢o Vidal
+- Leonel Camurça
+- João Vidal
 
 Funcionalidade:
 
@@ -37,7 +37,7 @@ Funcionalidade:
 Funcionalidade:
   
 > - Consulta de carros
-> - Historico locaÃ§Ã£o
+> - Historico locação
 
 ###### Equipe 4:
 
@@ -55,12 +55,12 @@ Lucas dos Santos Brito
 
 Funcionalidade
 
-> - RelatÃ³rios ( Faturamento / Modelos mais alugados / Ticket mÃ©dio/ Tempo mÃ©dio)
+> - Relatórios ( Faturamento / Modelos mais alugados / Ticket médio/ Tempo médio)
 
 
 # Softwares 
 
-SugestÃ£o de Softwares para criaÃ§Ã£o das telas do sistema (Open source)
+Sugestão de Softwares para criação das telas do sistema (Open source)
 
 
 Pencil
@@ -71,7 +71,7 @@ Balsamiq Mockups
 
 	https://balsamiq.com/     
     
-Napkee (GeraÃ§Ã£o de cÃ³digo CSS/HTML)
+Napkee (Geração de código CSS/HTML)
 
 	http://www.napkee.com   
 
