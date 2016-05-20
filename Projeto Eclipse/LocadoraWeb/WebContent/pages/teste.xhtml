@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+		xmlns:f="http://java.sun.com/jsf/core"
+		xmlns:h="http://java.sun.com/jsf/html"
+		xmlns:ui="http://java.sun.com/jsf/facelets">
+
+<ui:composition template="/templates/template.xhtml">
+		<ui:define name="corpo">
+	<h1>Teste de Cadastro</h1>
+	
+	<h:form>
+		
+			<h:outputLabel value="Nome" for="nome"/>
+			<h:inputText id="nome" value="#{usuarioBean.usuario.nome}"
+				styleClass="texto-longo" required="true" label="Nome"/>
+			
+			<h:outputLabel value="Login" for="login"/>
+			<h:inputText id="login" value="#{usuarioBean.usuario.login}" 
+			required="true" label="Login"
+			validatorMessage="O Login deve ter no mínimo 4 letras e não pode conter números">
+				<f:validateLength minimum="4"/>
+				<f:validateRegex pattern="[a-zA-Z]+"/>
+			</h:inputText>
+			
+			<h:outputLabel value="Senha" for="senha"/>
+			<h:inputSecret id="senha" value="#{usuarioBean.usuario.senha}"
+			required="true" label="Senha">
+				<f:validator validatorId="senhaForte"/>
+			</h:inputSecret>
+			
+			<div class="acoes-principais">
+			<h:commandLink value="Voltar" action="lista" immediate="true"/>
+			&#160;
+			<h:commandButton value="Salvar" action="#{usuarioBean.adiciona}">
+				<f:ajax execute="@form" render="@form :msg"/>
+			</h:commandButton>
+			</div>
+		
+	</h:form>
+	
+	</ui:define>
+	</ui:composition>
+
+</html>

@@ -7,13 +7,61 @@
 	xmlns:ui="http://java.sun.com/jsf/facelets"
 	xmlns:p="http://primefaces.org/ui">
 	<h:head>
-		<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
-		<title>Locadora Web</title>
-		<h:outputStylesheet library="css" name="style.css"/>
-	</h:head>
-	<h:body>
-		
-		
-		
-	</h:body>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	<title>Locadora Web</title>
+	<h:outputStylesheet library="css" name="style.css"/>
+</h:head>
+
+<h:body>
+	<div id="cabecalho">
+	<ui:insert name="cabecalho">
+		<div id="user-info">
+			<h:form>
+				#{usuarioLogado.usuario.login} - 
+				<h:commandLink value="Sair" action="#{loginBean.sair}"/>
+			</h:form>
+		</div>
+		<ul id="menu-principal">
+			<li>
+				<h:link value="Usuário" outcome="/pages/usuario/lista"/>
+			</li>
+			<li>
+				<h:link value="Bug" outcome="/pages/bug/lista"/>
+			</li>
+			<li>
+				<h:link value="Paginação" outcome="/pages/paginacao"/>
+			</li>
+		</ul>
+	</ui:insert>	
+	</div>
+	
+	<p:growl autoUpdate="true"/>
+	<div id="conteudo">
+	
+	<div id="ajax-loading">
+		<p:ajaxStatus>
+			<f:facet name="start">
+			<h:graphicImage library="imagens" name="ajax-loader.gif" />
+			</f:facet>
+			<f:facet name="complete">
+				<h:outputText value=""/>
+			</f:facet>
+		</p:ajaxStatus>
+	</div>
+	
+		<div id="container">
+	
+			<ui:insert name="corpo"/>
+	
+		</div>
+	</div>
+	
+	<div id="rodape">
+		<div class="rodape-bar">
+			<strong>Locadora Web</strong> - Técnicas em Internet I | Unifor 2016
+		</div>
+	</div>
+	
+</h:body>
+
 </html>
