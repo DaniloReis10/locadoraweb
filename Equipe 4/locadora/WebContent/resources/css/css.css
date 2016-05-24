@@ -1,0 +1,342 @@
+#delogin{
+	width:100px;
+	height:100px;
+	position:absolute;
+	top:50%;
+	left:50%;
+	margin-top:-50px;
+	margin-left:-50px;
+}
+
+
+#cabecalho {
+	background-image: url(../images/h1-background.jpg);
+    padding: 10px;
+    color:#576296;
+    font-size: 30px;
+    font-weight: bold;
+}
+
+#logo{
+	float: left;
+}
+
+#sair-topo {
+	float: right;
+	font-size: 22px;
+	padding-top: 5px;
+}
+
+#sair-topo a.sair-link {
+	color:#576296;
+}
+
+#salvar {
+	margin: auto;
+	display: table;
+	padding-top: 50px;
+}
+
+#conteudo {
+
+
+	display:block;
+	width:100%;
+	height:auto;
+	position:relative;
+	overflow:auto;
+	padding: 20px 0;
+	background-color:#FFF;
+	background-image:url(../images/bgHeader.png);
+	background-position:0px -461px;
+	background-repeat:repeat-x;
+
+}
+
+body{
+	color: #333333;
+	font-family: serif;
+
+}
+
+h1 {
+	
+}	
+
+h2{
+	color: #2a2948;
+	text-indent: 1em;
+}
+
+a {
+	color: 576296;
+}
+
+p.tabular {
+	text-indent: 3em;
+}
+
+#formulario{
+	font-size: 18px;
+	padding: 10px;
+	padding-left: 40px;
+}
+
+#responsavel, #lavagem, #datepicker, #hora_entrega, #encaminhar, #lavagem1, #tipoos, #uf,#tanque, #km, #kmdevolucao, #tanquedevolucao, #horadevolucao, #horalavagem {
+	font-size: 16px;
+	width: 317px;
+}
+
+#datepicker {
+	font-size: 16px;
+}
+
+input.caixa-texto{
+	font-size: 16px;
+}
+
+#menu {
+	display: table;
+	font-size: 18px;
+	margin: auto;
+}
+
+#menu ul{
+	padding:0px;
+	background-color:#EDEDED;
+	list-style:none;
+	
+}
+
+#menu ul li { display: inline; }
+
+#menu ul li a {
+	padding: 2px 10px;
+	display: inline-block;
+ 
+	/* estilo do link */
+	background-color:#F0F0Fb;
+	color: #333;
+	text-decoration: none;
+	border-bottom:3px solid #E0E0E0;
+}
+
+#menu ul li a:hover {
+	background-color:#D6D6D6;
+	color: #6D6D6D;
+	border-bottom:3px solid #576296;
+}
+
+#menu ul li a.ativo {
+	background-color:#D6D6D6;
+	color: #6D6D6D;
+	border-bottom:3px solid #576296;
+	font-weight: bold;
+}
+
+/* css.felipe 27/03/2016*/
+#menu2 ul li a.ativo2 {
+  background-color:#D6D6D6;
+  color: #6D6D6D;
+  border-bottom:3px solid #576296;
+  font-weight: bold;
+}
+/* css.felipe 27/03/2016*/
+
+
+/* css.felipe */
+ #menu2,
+#menu2 ul,
+#menu2 li,
+#menu2 a {
+    margin: 0;
+    padding: 0;
+    border: none;
+    outline: none;
+}
+ 
+#menu2 {
+    display: table;
+ 
+    background: #4c4e5a;
+    background: -webkit-linear-gradient(top, #4c4e5a 0%,#2c2d33 100%);
+    background: -moz-linear-gradient(top, #4c4e5a 0%,#2c2d33 100%);
+    background: -o-linear-gradient(top, #4c4e5a 0%,#2c2d33 100%);
+    background: -ms-linear-gradient(top, #4c4e5a 0%,#2c2d33 100%);
+    background: linear-gradient(top, #4c4e5a 0%,#2c2d33 100%);
+ 
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+    margin: auto;
+}
+ 
+#menu2 li {
+    position: relative;
+    list-style: none;
+    float: left;
+    display: block;
+    height: 40px;
+}
+
+#menu2 ul {
+    position: absolute;
+    top: 40px;
+    left: 0;
+ 
+    opacity: 0;
+    background: #1f2024;
+ 
+    -webkit-border-radius: 0 0 5px 5px;
+    -moz-border-radius: 0 0 5px 5px;
+    border-radius: 0 0 5px 5px;
+ 
+    -webkit-transition: opacity .25s ease .1s;
+    -moz-transition: opacity .25s ease .1s;
+    -o-transition: opacity .25s ease .1s;
+    -ms-transition: opacity .25s ease .1s;
+    transition: opacity .25s ease .1s;
+}
+ 
+#menu2 li:hover > ul { opacity: 1; }
+ 
+#menu2 ul li {
+    height: 0;
+    overflow: hidden;
+    padding: 0;
+ 
+    -webkit-transition: height .25s ease .1s;
+    -moz-transition: height .25s ease .1s;
+    -o-transition: height .25s ease .1s;
+    -ms-transition: height .25s ease .1s;
+    transition: height .25s ease .1s;
+}
+
+
+
+#menu2 a.documents { background: url(../img/docs.png) no-repeat 6px center; }
+#menu2 a.messages { background: url(../img/bubble.png) no-repeat 6px center; }
+#menu2 a.signout { background: url(../img/arrow.png) no-repeat 6px center; }
+
+ 
+#menu2 ul li:last-child a { border: none; }
+ 
+#menu2 li:hover > ul li {
+    height: 36px;
+    overflow: visible;
+    padding: 0;
+}
+
+#menu2 li a {
+    display: block;
+    padding: 0 14px;
+    margin: 6px 0;
+    line-height: 28px;
+    text-decoration: none;
+ 
+    border-left: 1px solid #393942;
+    border-right: 1px solid #4f5058;
+ 
+    
+    font-weight: bold;
+    font-size: 16px;
+ 
+    color: #f3f3f3;
+    text-shadow: 1px 1px 1px rgba(0,0,0,.6);
+ 
+    -webkit-transition: color .2s ease-in-out;
+    -moz-transition: color .2s ease-in-out;
+    -o-transition: color .2s ease-in-out;
+    -ms-transition: color .2s ease-in-out;
+    transition: color .2s ease-in-out;
+}
+ 
+#menu2 li:first-child a { border-left: none; }
+#menu2 li:last-child a{ border-right: none; }
+ 
+#menu2 li:hover > a { color:#5762b0; }
+#menu2 li:hover > a.ativoa{ color: #5762b0;}
+
+#menu2 li > a.ativo2{ color: #8b93c8;}
+
+/* css.felipe */
+
+
+
+#rodape{
+	display:block; 
+	width: 98%;
+	position: relative;
+	bottom: 0;
+	background-color:#FFF
+	}
+
+#rodape.baixo{
+	position: absolute;
+}
+			
+div.rodape-bar {text-align:center; font-size:14px; padding:5px; display:block; color:#5762b0; border-top:solid 1px #576296;}
+div.rodape-bar strong {color:#576297;} 
+
+table.dados{
+	height:auto;
+	margin-bottom: 10px;
+	width:100%;
+	padding:10px;
+}
+
+table.dados tr th{
+	background-color:#2a2948;
+	color:#fff;
+	color:1em;
+	padding:10px;
+	text-align: left;
+	font-size: 18px;
+}
+
+table.dados tr td{
+	padding:5px 10px;
+	text-align: left;
+	font-size: 16px;
+	background-color: #F0F0Fb;
+}
+
+table.dados tr.dif td{
+	background-color: #E0E0E0;
+}
+
+.botao {
+  background: #3498db;
+  background-image: -webkit-linear-gradient(top, #2a2948, #576297);
+  background-image: -moz-linear-gradient(top, #2a2948, #576297);
+  background-image: -ms-linear-gradient(top, #2a2948, #576297);
+  background-image: -o-linear-gradient(top, #2a2948, #576297);
+  background-image: linear-gradient(to bottom, #2a2948, #576297);
+  -webkit-border-radius: 15;
+  -moz-border-radius: 15;
+  border-radius: 8px;
+  color: #ffffff;
+  font-size: 16px;
+  padding: 7px 10px 10px 10px;
+  text-decoration: none;
+  font-family: serif;
+  font-weight: bold;
+}
+
+.botao:hover {
+  background: #3cb0fd;
+  background-image: -webkit-linear-gradient(top, #576297, #3498db);
+  background-image: -moz-linear-gradient(top, #576297, #3498db);
+  background-image: -ms-linear-gradient(top, #576297, #3498db);
+  background-image: -o-linear-gradient(top, #576297, #3498db);
+  background-image: linear-gradient(to bottom, #576297, #3498db);
+  text-decoration: none;
+}
+
+/* css.felipe */
+.primeiro{ float: left; width: 30%; }
+
+.segundo{ float: right; width: 60%; }
+/* css.felipe */
+ 
+

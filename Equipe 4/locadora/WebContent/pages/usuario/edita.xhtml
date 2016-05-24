@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="ISO-8859-1" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:t="http://myfaces.apache.org/tomahawk"
+	xmlns:ui="http://java.sun.com/jsf/facelets">
+	
+	<ui:composition template="/templates/template_principal.xhtml">
+	<ui:define name="corpo">
+	
+		<t:saveState value="#{usuarioBean.usuario}"/>
+	
+		<h1>Edita Usuário</h1>
+	
+		<h:form id="form">
+				
+				<h:outputLabel value="Nome" for="nome"/>
+				<h:inputText id="nome" value="#{usuarioBean.usuario.nome}" required="true" label="Nome"/>
+								
+				<h:outputLabel value="Email" for="email"/>
+				<h:inputText id="email" value="#{usuarioBean.usuario.email}" required="true" label="E-mail"/>
+				
+				<h:outputLabel value="Telefone" for="telefone"/>
+				<h:inputText id="telefone" value="#{usuarioBean.usuario.telefone}" required="true" label="Telefone"/>
+				
+				<h:outputLabel value="Endereço" for="endereco"/>
+				<h:inputText id="endereco" value="#{usuarioBean.usuario.endereco}" required="true" label="Endereço"/>
+				
+				<h:outputLabel value="CEP" for="cep"/>
+				<h:inputText id="cep" value="#{usuarioBean.usuario.cep}"/>
+				
+				<h:outputLabel value="Cidade" for="cidade"/>
+				<h:inputText id="cidade" value="#{usuarioBean.usuario.cidade}" required="true" label="Cidade"/>
+				
+				<h:outputLabel value="UF" for="uf"/>
+				<h:selectOneMenu id="uf" value="#{usuarioBean.usuario.uf}">
+					<f:selectItem itemValue="AC" itemLabel="AC" />
+					<f:selectItem itemValue="AM" itemLabel="AM" />
+					<f:selectItem itemValue="AP" itemLabel="AP" />
+					<f:selectItem itemValue="BA" itemLabel="BA" />
+					<f:selectItem itemValue="CE" itemLabel="CE" />
+					<f:selectItem itemValue="DF" itemLabel="DF" />
+					<f:selectItem itemValue="ES" itemLabel="ES" />
+					<f:selectItem itemValue="GO" itemLabel="GO" />
+					<f:selectItem itemValue="MA" itemLabel="MA" />
+					<f:selectItem itemValue="MG" itemLabel="MG" />
+					<f:selectItem itemValue="MS" itemLabel="MS" />
+					<f:selectItem itemValue="MT" itemLabel="MT" />
+					<f:selectItem itemValue="PA" itemLabel="PA" />
+					<f:selectItem itemValue="PB" itemLabel="PB" />
+					<f:selectItem itemValue="PE" itemLabel="PE" />
+					<f:selectItem itemValue="PI" itemLabel="PI" />
+					<f:selectItem itemValue="PR" itemLabel="PR" />
+					<f:selectItem itemValue="RJ" itemLabel="RJ" />
+					<f:selectItem itemValue="RN" itemLabel="RN" />
+					<f:selectItem itemValue="RO" itemLabel="RO" />
+					<f:selectItem itemValue="RR" itemLabel="RR" />
+					<f:selectItem itemValue="RS" itemLabel="RS" />
+					<f:selectItem itemValue="SC" itemLabel="SC" />
+					<f:selectItem itemValue="SE" itemLabel="SE" />
+					<f:selectItem itemValue="SP" itemLabel="SP" />
+					<f:selectItem itemValue="TO" itemLabel="TO" />
+				</h:selectOneMenu>				
+				
+				<h:outputLabel value="Login" for="login" />
+				<h:inputText id="login" value="#{usuarioBean.usuario.login}" readonly="true" label="Login"> 
+					<f:validateLength minimum="4"/>
+					<f:validateRegex pattern="[a-ZA-Z]+" />
+				</h:inputText>
+				
+				<h:outputLabel value="Senha" for="senha"/>
+				<h:inputSecret id="senha" value="#{usuarioBean.usuario.senha}" required="true" label="Senha">
+					<f:validator validatorId="senhaForte"/>
+				</h:inputSecret>
+				
+				<h:outputLabel value="É Funcionário" for="funcionario"/>
+				<h:selectBooleanCheckbox id="funcionario" value="#{usuarioBean.usuario.funcionario}" />
+					
+				<div class="acoes-principais">
+					<h:commandLink value="Voltar" action="lista" immediate="true"> 
+						<f:ajax render="@form :mensagens" execute="@form"/>
+					</h:commandLink>
+						&#160;
+					<h:commandButton value="Salvar" action="#{usuarioBean.altera}"> 
+						<f:ajax render="@form :mensagens" execute="@form"/>
+					</h:commandButton>
+				</div>	
+			</h:form>
+			
+		</ui:define>
+		</ui:composition>
+	
+</html>

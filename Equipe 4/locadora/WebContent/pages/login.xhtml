@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:t="http://myfaces.apache.org/tomahawk"
+	xmlns:pt="http://xmlns.jcp.org/jsf/passthrough"
+	xmlns:ui="http://java.sun.com/jsf/facelets">
+
+	<ui:composition template="/templates/template_principal.xhtml">
+		<ui:define name="cabecalho"></ui:define>
+		<ui:define name="corpo">
+		
+				<fieldset id="login-form">
+					<legend>Acesse o Sistema</legend>
+				<h:form>
+					
+					<h:inputText value="#{loginBean.login}" autocomplete="off" required="true" label="Login" pt:placeholder="Login"/>				
+
+					<h:inputSecret value="#{loginBean.senha}" pt:placeholder="Senha" label="Senha"/>
+				
+					<div class="acoes-principais">
+						<h:commandButton value="Logar" action="#{loginBean.logar}"/>
+					</div>
+				</h:form>
+				</fieldset>
+
+		</ui:define>
+	</ui:composition>	
+	
+</html>

@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="ISO-8859-1" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:t="http://myfaces.apache.org/tomahawk"
+	xmlns:pt="http://xmlns.jcp.org/jsf/passthrough">
+	<h:head>
+	<h:outputStylesheet library="css" name="app.css" />
+		<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
+		<title>Locadora Web</title>
+	</h:head>
+	<body>
+		<div id="cabecalho">
+			<div id="user-info">
+				<h:form>
+					#{usuarioLogado.usuario.nome}
+						&#160;
+					<h:commandLink value="Sair" action="#{loginBean.deslogar}"/>
+				</h:form>
+			</div>
+			<ul id="menu-principal">
+				<li>
+					<h:link value="Usuário" outcome="/pages/usuario/lista"/>
+				</li>
+			</ul>
+		</div>
+		
+		<h:messages errorClass="errors" infoClass="notice" id="mensagens"/>
+		
+		<div id="conteudo">
+			<div id="container">	
+				<h1>Template</h1>
+				
+					<!-- conteúdo da página -->
+				
+			</div>
+		</div>
+		
+		<div id="rodape">
+			<div class="rodape-bar">
+				<strong>Locadora Web</strong> - Carros | 2016
+			</div>
+		</div>
+		
+	</body>
+</html>

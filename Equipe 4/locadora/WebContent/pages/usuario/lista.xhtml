@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:t="http://myfaces.apache.org/tomahawk"
+	xmlns:ui="http://java.sun.com/jsf/facelets">
+	
+	<ui:composition template="/templates/template_principal.xhtml">
+	<ui:define name="corpo">
+	
+		<t:saveState value="#{usuarioBean.usuarios}"/>
+	
+		<h1>Lista de Usuários</h1>
+		
+		<h:form id="form">
+			
+			<div class="acoes-principais">
+				<h:commandLink value="Novo" action="novo">
+					<f:ajax render="@form :mensagens" execute="@form"/>
+				</h:commandLink>
+					&#160;
+				<h:commandButton value="Listar" action="#{usuarioBean.lista}"> 
+					<f:ajax render="@form :mensagens" execute="@form"/>
+				</h:commandButton>
+			</div>
+			
+			<h:dataTable value="#{usuarioBean.usuarios}" var="usuario" styleClass="dados" rowClasses="impar,par">
+				<h:column>
+					<f:facet name="header">ID</f:facet>
+					#{usuario.id}
+				</h:column>
+				<h:column>
+					<f:facet name="header">Nome</f:facet>
+					#{usuario.nome}
+				</h:column>
+				<h:column>
+					<f:facet name="header">Telefone</f:facet>
+					#{usuario.telefone}
+				</h:column>
+				<h:column>
+					<f:facet name="header">E-mail</f:facet>
+					#{usuario.email}
+				</h:column>
+				<h:column>
+					<f:facet name="header">Cidade</f:facet>
+					#{usuario.cidade}
+				</h:column>
+				<h:column>
+					<f:facet name="header">Estado</f:facet>
+					#{usuario.uf}
+				</h:column>
+				<h:column>
+					<f:facet name="header">É Funcionário</f:facet>
+					#{usuario.funcionario}
+				</h:column>
+				<h:column>
+					<f:facet name="header">Ações</f:facet>
+					<h:commandLink value="remover" action="#{usuarioBean.remove(usuario)}"> 
+						<f:ajax render="@form :mensagens" execute="@form"/>
+					</h:commandLink>
+						&#160;
+					<h:commandLink value="alterar" action="edita">
+						<f:ajax render="@form :mensagens" execute="@form"/>
+						<f:setPropertyActionListener value="#{usuario}" target="#{usuarioBean.usuario}"></f:setPropertyActionListener>
+					</h:commandLink>
+				</h:column>
+			</h:dataTable>
+		</h:form>
+		
+	</ui:define>
+	</ui:composition>
+</html>

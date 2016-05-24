@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:t="http://myfaces.apache.org/tomahawk"
+	xmlns:ui="http://java.sun.com/jsf/facelets">
+	
+	<ui:composition template="/templates/template_principal2.xhtml">
+	<ui:define name="corpo">
+	
+		<t:saveState value="#{osBean.oss}"/>
+	
+		<h1>Lista de Ordens de Serviços</h1>
+		
+		<h:form id="form">
+			
+			<div class="acoes-principais">
+				<h:commandLink value="Novo" action="novo">
+					<f:ajax render="@form :mensagens" execute="@form"/>
+				</h:commandLink>
+					&#160;
+				<h:commandButton value="Listar" action="#{osBean.lista}"> 
+					<f:ajax render="@form :mensagens" execute="@form"/>
+				</h:commandButton>
+			</div>
+			
+			<h:dataTable value="#{osBean.oss}" var="os" styleClass="dados" rowClasses="impar,par">
+				<h:column>
+					<f:facet name="header">#</f:facet>
+					#{os.id}
+				</h:column>
+				<h:column>
+					<f:facet name="header">Nome do Cliente</f:facet>
+					#{os.cliente.nome}
+				</h:column>
+				<h:column>
+					<f:facet name="header">Placa do Carro</f:facet>
+					#{os.carro.placa}
+				</h:column>
+				<h:column>
+					<f:facet name="header">Modelo do Carro</f:facet>
+					#{os.carro.modelo}
+				</h:column>
+				<h:column>
+					<f:facet name="header">Status do Carro</f:facet>
+					#{os.carro.statusCarro}
+				</h:column>
+				<h:column>
+					<f:facet name="header">Responsável</f:facet>
+					#{os.responsavel.nome}
+				</h:column>
+				<h:column>
+					<f:facet name="header">Ações</f:facet>
+					<h:commandLink value="remover" action="#{osBean.remove(os)}"
+					  onclick="return confirm('Deseja realmente apagar essa Ordem de Serviço?');">
+						<f:ajax render="@form :mensagens" execute="@form"/>
+					</h:commandLink>
+						&#160;
+					<h:commandLink value="fechar" action="#{osBean.conclui(os)}"
+					onclick="return confirm('Deseja realmente fechar essa Ordem de Serviço?');"> 
+						<f:ajax render="@form :mensagens" execute="@form"/>
+					</h:commandLink>	
+						&#160;
+					<h:commandLink value="alterar" action="edita">
+						<f:ajax render="@form :mensagens" execute="@form"/>
+						<f:setPropertyActionListener value="#{os}" target="#{osBean.os}"></f:setPropertyActionListener>
+					</h:commandLink>
+				</h:column>
+			</h:dataTable>
+		</h:form>
+		
+	</ui:define>
+	</ui:composition>
+</html>

@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="ISO-8859-1" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:t="http://myfaces.apache.org/tomahawk"
+	xmlns:ui="http://java.sun.com/jsf/facelets">
+	
+	<ui:composition template="/templates/template_principal2.xhtml">
+	<ui:define name="corpo">
+	
+		<t:saveState value="#{osBean.os}"/>
+	
+		<h1>Edita Ordem de Serviço: Número #{osBean.os.id}</h1>
+	
+		<h:form id="form">
+
+				<h:outputLabel value="Sumário" for="sumario"/>
+				<h:inputText id="sumario" value="#{osBean.os.sumario}" 
+				label="Sumário" readonly="true" styleClass="texto-longo"/>
+		
+				<h:outputLabel value="Nome do Cliente" for="cliente"/>
+				<h:inputText id="cliente" label="Cliente" value="#{osBean.os.cliente.nome}" readonly="true"/>
+											
+				<h:outputLabel value="Escolha a placa de um carro" for="carro"/>
+				<h:selectOneMenu id="carro" label="Carro" value="#{osBean.os.carro.id}" required="true">
+					<f:selectItem itemLabel="Selecione um carro" noSelectionOption="true"/>
+					<f:selectItems value="#{carroDao.listaDisponiveis()}" var="u"
+						itemLabel="#{u.placa}" itemValue="#{u.id}"/>
+					<!--<f:ajax execute="@form"/>-->
+				</h:selectOneMenu>
+				<!-- 
+				<h:outputLabel value="Modelo" for="modelo"/>
+				<h:inputText id="modelo" label="Modelo" value="#{osBean.os.carro.modelo}" readonly="true">
+					<f:ajax render="@form"/>
+				</h:inputText>
+				-->	
+				<h:outputLabel value="Descrição" for="descricao"/>
+				<h:inputTextarea id="descricao" value="#{osBean.os.descricao}" required="true" label="Descrição"
+					rows="3" styleClass="texto-longo">
+					<f:validateLength maximum="1000"/>
+				</h:inputTextarea>	
+				
+				<h:outputLabel value="Responsável" for="responsavel"/>
+				<h:selectOneMenu id="responsavel" label="Responsável" value="#{osBean.os.responsavel.id}" required="true">
+					<f:selectItem itemLabel="Selecione um funcionário" noSelectionOption="true"/>
+					<f:selectItems value="#{usuarioDao.listaFuncionarios()}" var="u"
+						itemLabel="#{u.nome}" itemValue="#{u.id}"/>
+				</h:selectOneMenu>
+				
+				<h:outputLabel value="Criado em" for="criadoEm"/>
+				<h:inputText id="criadoEm" value="#{osBean.os.criadoEm}" label="Criado em" readonly="true">
+					<f:convertDateTime pattern="dd/MM/YYYY"/>
+				</h:inputText>
+			
+				<div class="acoes-principais">
+					<h:commandLink value="Voltar" action="lista" immediate="true"> 
+						<f:ajax render="@form :mensagens" execute="@form"/>
+					</h:commandLink>
+						&#160;
+					<h:commandButton value="Salvar" action="#{osBean.altera}"> 
+						<f:ajax render="@form :mensagens" execute="@form"/>
+					</h:commandButton>
+				</div>	
+			</h:form>
+			
+		</ui:define>
+		</ui:composition>
+	
+</html>
