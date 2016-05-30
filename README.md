@@ -42,16 +42,14 @@ Funcionalidade:
 ###### Equipe 4:
 
 - Igor Oliveira
+- Lucas dos Santos Brito
+- Emanuel Alves
 
 Funcionalidade:
 
 > - Cadastro de Cliente
 > - Cadastro de Funcionario
 > - Login e Senha
-
-###### Equipe 5:
-
-Lucas dos Santos Brito
 
 Funcionalidade
 
