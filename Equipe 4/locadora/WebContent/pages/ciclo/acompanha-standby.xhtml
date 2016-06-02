@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:t="http://myfaces.apache.org/tomahawk"
+	xmlns:ui="http://java.sun.com/jsf/facelets">
+	
+	<ui:composition template="/templates/template_principal3.xhtml">
+	<ui:define name="corpo">
+	
+		<t:saveState value="#{osBean.os}"/>
+		
+		<h1>Acompanhamento da OS #{osBean.os.id}</h1>
+		<h2>Status: #{osBean.os.carro.statusCarro}</h2>
+		
+		
+		<h:form id="form">
+			
+			<h:outputLabel value="Nome do Cliente" for="cliente"/>
+			<h:inputText id="cliente" label="Cliente" value="#{osBean.os.cliente.nome}" readonly="true"/>
+			
+			<h:outputLabel value="Responsável" for="responsavelEntrega"/>
+				<h:selectOneMenu id="responsavelEntrega" label="Responsável" value="#{osBean.os.responsavel.id}" required="true">
+					<f:selectItem itemLabel="Selecione um funcionário" noSelectionOption="true"/>
+					<f:selectItems value="#{usuarioDao.listaFuncionarios()}" var="u"
+						itemLabel="#{u.nome}" itemValue="#{u.id}"/>
+			</h:selectOneMenu>
+			
+			<h:outputLabel value="Tanque" for="tanqueEntrega"/>
+				<h:inputText id="tanqueEntrega" value="#{osBean.os.tanqueEntrega}"
+				label="Tanque" required="true" styleClass="texto-longo"/>				
+			
+			<h:outputLabel value="Quilometragem" for="kmEntrega"/>
+				<h:inputText id="kmEntrega" value="#{osBean.os.kmEntrega}"
+				label="Quilometragem" required="true"/>
+				
+			<br> O Status se tornará ENTREGUE.</br>	
+			
+			<div class="acoes-principais">
+				<h:commandLink value="Voltar" action="ciclo" immediate="true"> 
+					<f:ajax render="@form :mensagens" execute="@form"/>
+				</h:commandLink>
+				<h:commandButton value="Salvar" action="#{osBean.alteraStandBy}"> 
+						<f:ajax render="@form :mensagens" execute="@form"/>
+					</h:commandButton>
+			</div>		
+		
+		</h:form>
+		
+	</ui:define>
+	</ui:composition>
+</html>

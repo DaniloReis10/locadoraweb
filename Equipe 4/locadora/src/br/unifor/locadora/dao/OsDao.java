@@ -59,6 +59,16 @@ public class OsDao {
 	public void atualiza(Os os){
 		manager.merge(os);
 	}
+
+	/**
+	 * Atualiza OS em Status de StandBy para Entrega
+	 * @param os
+	 */
+	public void atualizaStandBy(Os os){
+		os.getCarro().setStatusCarro(StatusCarro.ENTREGUE);
+		os.setDataEntrega(new Date());
+		manager.merge(os);
+	}
 	
 	/**
 	 * Remove OS

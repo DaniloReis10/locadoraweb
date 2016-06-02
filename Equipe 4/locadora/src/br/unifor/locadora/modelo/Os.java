@@ -59,6 +59,52 @@ public class Os implements Serializable{
 	@OneToMany(cascade=CascadeType.ALL, 
 			orphanRemoval=true, mappedBy="os")
 	private List<Comentario> comentarios = new ArrayList<Comentario>();
+	
+	/**
+	 * Dados para o Status de Entrega
+	 * 
+	 */
+	@OneToOne(cascade=CascadeType.ALL)
+	private Usuario responsavelEntrega;
+	@Temporal(TemporalType.TIMESTAMP)
+	private Date dataEntrega;
+	private String tanqueEntrega;
+	private double kmEntrega;
+	
+
+	
+	
+	public Usuario getResponsavelEntrega() {
+		return responsavelEntrega;
+	}
+
+	public void setResponsavelEntrega(Usuario responsavelEntrega) {
+		this.responsavelEntrega = responsavelEntrega;
+	}
+
+	public Date getDataEntrega() {
+		return dataEntrega;
+	}
+
+	public void setDataEntrega(Date dataEntrega) {
+		this.dataEntrega = dataEntrega;
+	}
+
+	public String getTanqueEntrega() {
+		return tanqueEntrega;
+	}
+
+	public void setTanqueEntrega(String tanqueEntrega) {
+		this.tanqueEntrega = tanqueEntrega;
+	}
+
+	public double getKmEntrega() {
+		return kmEntrega;
+	}
+
+	public void setKmEntrega(double kmEntrega) {
+		this.kmEntrega = kmEntrega;
+	}
 
 	public Integer getId() {
 		return id;

@@ -34,6 +34,7 @@ public class OsBean {
 		this.os.setResponsavel(new Usuario());
 		this.os.setCliente(new Usuario());
 		this.os.setCarro(new Carro());
+		this.os.setResponsavelEntrega(new Usuario());
 	}
 
 	public Os getOs() {
@@ -107,9 +108,14 @@ public class OsBean {
 	 * Altera/Edita Os
 	 * @param os
 	 */
-	public void altera(Os os){
+	public void altera(){
 		osDao.atualiza(os);
 		new FacesUtil().mensagemSucesso("Ordem de Serviço alterada com sucesso!");
+	}
+	
+	public void alteraStandBy(){
+		osDao.atualizaStandBy(os);
+		new FacesUtil().mensagemSucesso("Ordem de Serviço encaminhada com sucesso!");
 	}
 	
 	//teste
@@ -133,11 +139,11 @@ public class OsBean {
 		case EM_VISTORIA:
 			break;
 		case ENTREGUE:
-			break;
+			return "acompanha-entregue";
 		case GARAGEM:
 			break;
 		case STAND_BY:
-			return "acompanha";
+			return "acompanha-standby";
 		default:
 			return null;
 		}
