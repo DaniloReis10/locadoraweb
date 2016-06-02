@@ -1,10 +1,15 @@
 package br.unifor.locadora.modelo;
 
+/**
+ * Classe Enum de Status de Carro
+ * @author Grupo4
+ *
+ */
 public enum StatusCarro {
 
 	GARAGEM,
 	STAND_BY,
-	ENTREGADO,
+	ENTREGUE,
 	DEVOLVIDO,
 	EM_VISTORIA,
 	EM_MANUTENÇÃO,

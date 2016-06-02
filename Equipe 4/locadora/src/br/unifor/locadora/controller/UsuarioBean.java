@@ -9,6 +9,12 @@ import br.unifor.locadora.dao.UsuarioDao;
 import br.unifor.locadora.modelo.Usuario;
 import br.unifor.locadora.util.FacesUtil;
 
+
+/**
+ * Classe Bean de Usuário
+ * @author Grupo4
+ *
+ */
 @ManagedBean
 public class UsuarioBean {
 	private Usuario usuario = new Usuario();
@@ -41,22 +47,35 @@ public class UsuarioBean {
 		return usuario;
 	}
 	
+	/**
+	 * Adiciona Usuário
+	 */
 	public void adiciona(){
 		dao.adiciona(this.usuario);
 		this.usuario = new Usuario();
 		new FacesUtil().mensagemSucesso("Usuário adicionado com sucesso!");
 	}
 	
+	/**
+	 * Lista Usuários
+	 */
 	public void lista(){
 		this.usuarios = dao.lista();
 	}
 	
+	/**
+	 * Remove Usuário
+	 * @param usuario
+	 */
 	public void remove(Usuario usuario){
 		dao.remove(usuario);
 		this.usuarios = dao.lista();
 		new FacesUtil().mensagemSucesso("Usuário removido com sucesso!");
 	}
 	
+	/**
+	 * Altera/Edita Usuário
+	 */
 	public void altera(){
 		dao.atualiza(usuario);
 		new FacesUtil().mensagemSucesso("Usuário alterado com sucesso!");

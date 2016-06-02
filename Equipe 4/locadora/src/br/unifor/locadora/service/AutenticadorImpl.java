@@ -6,6 +6,11 @@ import org.springframework.stereotype.Service;
 import br.unifor.locadora.dao.UsuarioDao;
 import br.unifor.locadora.modelo.Usuario;
 
+/**
+ * Classe Service para autenticação de login
+ * @author Grupo4
+ *
+ */
 @Service("autenticador")
 public class AutenticadorImpl implements Autenticador {
 

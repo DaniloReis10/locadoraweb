@@ -11,6 +11,11 @@ import javax.persistence.ManyToOne;
 import javax.persistence.Temporal;
 import javax.persistence.TemporalType;
 
+/**
+ * Classe Model de Comentário, não implementado
+ * @author Grupo4
+ *
+ */
 @Entity
 public class Comentario implements Serializable {
 	private static final long serialVersionUID = 1L;

@@ -8,6 +8,12 @@ import br.unifor.locadora.modelo.Usuario;
 import br.unifor.locadora.service.Autenticador;
 import br.unifor.locadora.util.FacesUtil;
 
+/**
+ * Classe Bean para Login
+ * @author Grupo4
+ *
+ */
+
 @ManagedBean
 @RequestScoped
 public class LoginBean {
@@ -46,7 +52,10 @@ public class LoginBean {
 	public void setAutenticador(Autenticador autenticador) {
 		this.autenticador = autenticador;
 	}
-	
+	/**
+	 * Método de logar após autenticação
+	 * @return redireciona para a página principal (Lista de OS)
+	 */
 	public String logar(){
 		autenticador.autentica(login, senha);
 		if (autenticador.autentica(login, senha) != null){
@@ -58,6 +67,11 @@ public class LoginBean {
 		return null;
 	}
 	
+	
+	/**
+	 * Método de deslogar
+	 * @return redireciona para a tela de login
+	 */
 	public String deslogar(){
 		usuarioLogado.desloga();
 		return "/pages/login?faces-redirect=true";

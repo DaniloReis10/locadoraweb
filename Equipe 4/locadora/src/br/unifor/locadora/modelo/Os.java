@@ -18,6 +18,11 @@ import javax.persistence.OneToOne;
 import javax.persistence.Temporal;
 import javax.persistence.TemporalType;
 
+/**
+ * Classe Model de OS
+ * @author Grupo4
+ *
+ */
 @Entity
 public class Os implements Serializable{
 	
@@ -171,12 +176,14 @@ public class Os implements Serializable{
 		return true;
 	}
 	
+	//teste
 	public void comenta(Comentario comentario){
 		comentario.setCriadoEm(new Date());
 		comentario.setOs(this);
 		this.comentarios.add(comentario);
 	}
 	
+	//teste
 	public void entrega(Comentario comentario){
 		comentario.setCriadoEm(new Date());
 		comentario.setOs(this);

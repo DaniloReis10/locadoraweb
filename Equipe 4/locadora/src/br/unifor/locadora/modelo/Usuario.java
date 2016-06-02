@@ -6,6 +6,11 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 
+/**
+ * Classe Model de Usuário
+ * @author Grupo4
+ *
+ */
 @Entity
 public class Usuario implements Serializable {
 	

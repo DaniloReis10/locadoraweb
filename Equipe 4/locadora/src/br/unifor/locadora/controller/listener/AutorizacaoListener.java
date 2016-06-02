@@ -8,8 +8,15 @@ import javax.faces.event.PhaseListener;
 
 import br.unifor.locadora.controller.UsuarioLogado;
 
+/**
+ * Classe que verifica a autorização de entrada
+ * @author Grupo4
+ *
+ */
 public class AutorizacaoListener implements PhaseListener {
-
+	/**
+	 * Apenas Usuários logados podem acessar as telas, caso contrário é redirecionado à tela de login
+	 */
 	@Override
 	public void afterPhase(PhaseEvent event) {
 		FacesContext context = event.getFacesContext();

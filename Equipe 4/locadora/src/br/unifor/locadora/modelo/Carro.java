@@ -8,6 +8,11 @@ import javax.persistence.Enumerated;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 
+/**
+ * Classe Model de Carro
+ * @author Grupo4
+ *
+ */
 @Entity
 public class Carro implements Serializable{
 

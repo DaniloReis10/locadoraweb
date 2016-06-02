@@ -3,7 +3,11 @@ package br.unifor.locadora.util;
 import javax.faces.application.FacesMessage;
 import javax.faces.context.FacesContext;
 
-
+/**
+ * Classe Util para mensagens de erro e sucesso
+ * @author Grupo4
+ *
+ */
 public class FacesUtil {
 	
 	private FacesContext facesContext;

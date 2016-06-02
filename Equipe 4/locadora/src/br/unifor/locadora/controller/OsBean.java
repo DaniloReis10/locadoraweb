@@ -15,6 +15,12 @@ import br.unifor.locadora.modelo.StatusCarro;
 import br.unifor.locadora.modelo.Usuario;
 import br.unifor.locadora.util.FacesUtil;
 
+/**
+ * Classe Bean para as Ordem de Serviços
+ * @author Grupo4
+ *
+ */
+
 @ManagedBean
 public class OsBean {
 	private Os os = new Os();
@@ -54,41 +60,64 @@ public class OsBean {
 		this.osDao = osDao;
 	}
 
+	/**
+	 * Adiciona nova OS
+	 */
 	public void adiciona(){
 		osDao.adiciona(this.os);
 		this.os = new Os();
 		new FacesUtil().mensagemSucesso("Ordem de Serviço adicionada com sucesso!");
 	}
 	
+	/**
+	 * Lista as Os
+	 */
 	public void lista(){
 		this.oss = osDao.lista();
 	}
 	
+	/**
+	 * Lista as Os com status ABERTO
+	 */
 	public void listaAbertas(){
 		this.oss = osDao.listaAbertas();
 	}
 	
+	/**
+	 * Remove Os
+	 * @param os
+	 */
 	public void remove(Os os){
 		osDao.remove(os);
 		this.oss = osDao.lista();
 		new FacesUtil().mensagemSucesso("Ordem de Serviço removida com sucesso!");
 	}
 	
+	/**
+	 * Concluí Os, Status modificado para FECHADO
+	 * @param os
+	 */
 	public void conclui(Os os){
 		osDao.conclui(os);
 		this.oss = osDao.lista();
 		new FacesUtil().mensagemSucesso("Ordem de Serviço fechada com sucesso!");
 	}
 	
+	/**
+	 * Altera/Edita Os
+	 * @param os
+	 */
 	public void altera(Os os){
 		osDao.atualiza(os);
 		new FacesUtil().mensagemSucesso("Ordem de Serviço alterada com sucesso!");
 	}
 	
+	//teste
 	public void carregaModelo(Os os){
 		os.getCarro().setModelo(os.getCarro().getModelo());;
 	}
 	
+	//teste
 	public void acompanha(Os os){
 		osDao.acompanha(os);
 	}

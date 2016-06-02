@@ -14,7 +14,11 @@ import br.unifor.locadora.modelo.Os;
 import br.unifor.locadora.modelo.Status;
 import br.unifor.locadora.modelo.StatusCarro;
 
-
+/**
+ * Classe DAO de OS
+ * @author Grupo 4
+ *
+ */
 @Transactional
 @Repository
 public class OsDao {
@@ -22,32 +26,63 @@ public class OsDao {
 	@PersistenceContext
 	private EntityManager manager;
 
+	/**
+	 * Lista as OS
+	 * @return lista
+	 */
 	public List<Os> lista() {
 		return manager.createQuery("select o from Os o ", Os.class)
 					.getResultList();
 	}
 	
+	/**
+	 * Lista as OS em ABERTO
+	 * @return lista
+	 */
 	public List<Os> listaAbertas() {
 		return manager.createQuery("select o from Os o where o.status='ABERTO'", Os.class)
 					.getResultList();
 	}
 	
+	/**
+	 * Adiciona OS
+	 * @param os
+	 */
 	public void adiciona(Os os){
 		manager.merge(os);
 	}
 	
+	/**
+	 * Atualiza OS
+	 * @param os
+	 */
 	public void atualiza(Os os){
 		manager.merge(os);
 	}
 	
+	/**
+	 * Remove OS
+	 * @param os
+	 */
 	public void remove(Os os){
 		manager.remove(manager.merge(os));
 	}
 	
+	/**
+	 * Busca OS por id
+	 * @param id
+	 * @return os
+	 */
 	public Os busca(Integer id){
 		return manager.find(Os.class, id);
 	}
 	
+	/**
+	 * Lista Os em paginção, não implementada devido a quantidade pequena de OS
+	 * @param inicio
+	 * @param quantidade
+	 * @return lista
+	 */
 	public List<Os> listaPaginada(int inicio, int quantidade){
 		try{
 			return manager
@@ -60,6 +95,10 @@ public class OsDao {
 		}
 	}
 	
+	/**
+	 * Conta quantidade de OS
+	 * @return int
+	 */
 	public int contaTodos(){
 		try{
 			Long count = manager
@@ -71,6 +110,11 @@ public class OsDao {
 		}
 	}
 	
+	/**
+	 * Lista Os de um determinado usuário
+	 * @param id
+	 * @return lista
+	 */
 	public List<Os> getOsDoUsuario(Integer id){
 		try{
 			return manager
@@ -82,6 +126,7 @@ public class OsDao {
 		}
 	}
 	
+	//teste
 	public Os buscaComComentarios(Integer id){
 		try{
 			Os os = manager.find(Os.class, id);
@@ -94,6 +139,10 @@ public class OsDao {
 		}
 	}
 	
+	/**
+	 * Modifica o Status para FECHADO
+	 * @param os
+	 */
 	public void conclui(Os os){
 		os.setFinalizadoEm(new Date());
 		os.setStatus(Status.FECHADO);
@@ -101,6 +150,7 @@ public class OsDao {
 		manager.merge(os);
 	}
 	
+	//teste
 	public void comenta(Integer id, Comentario comentario) {
 		try {
 			Os os = this.busca(id);
@@ -109,6 +159,7 @@ public class OsDao {
 		}
 	}
 	
+	//teste
 	public void entrega(Integer id, Comentario comentario){
 		try{
 			Os os = this.busca(id);
@@ -118,6 +169,7 @@ public class OsDao {
 
 	}
 	
+	//teste
 	public String acompanha (Os os){
 		if (os.getCarro().getStatusCarro().equals("STAND_BY")){
 			return "/pages/ciclo/acompanha";

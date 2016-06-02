@@ -7,6 +7,12 @@ import javax.faces.bean.SessionScoped;
 
 import br.unifor.locadora.modelo.Usuario;
 
+
+/**
+ * Classe que verifica se o Usuário está logado
+ * @author Grupo4
+ *
+ */
 @ManagedBean
 @SessionScoped
 public class UsuarioLogado implements Serializable {
