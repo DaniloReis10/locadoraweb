@@ -26,4 +26,8 @@ public class CarroDao {
 	public List<StatusCarro> getTodosOsEstagios(){
 		return Arrays.asList(StatusCarro.values());
 	}
+	
+	public Carro carregaModelo(Integer id){
+		return manager.find(Carro.class, id);
+	}
 }

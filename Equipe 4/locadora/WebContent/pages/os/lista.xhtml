@@ -51,6 +51,10 @@
 					#{os.responsavel.nome}
 				</h:column>
 				<h:column>
+					<f:facet name="header">Status</f:facet>
+					#{os.status}
+				</h:column>
+				<h:column>
 					<f:facet name="header">Ações</f:facet>
 					<h:commandLink value="remover" action="#{osBean.remove(os)}"
 					  onclick="return confirm('Deseja realmente apagar essa Ordem de Serviço?');">

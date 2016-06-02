@@ -23,18 +23,30 @@
 				<h:inputText id="cliente" label="Cliente" value="#{osBean.os.cliente.nome}" readonly="true"/>
 											
 				<h:outputLabel value="Escolha a placa de um carro" for="carro"/>
-				<h:selectOneMenu id="carro" label="Carro" value="#{osBean.os.carro.id}" required="true">
+				<h:selectOneMenu id="carro" label="Carro" onclick="funcao()" value="#{osBean.os.carro.id}" required="true" readonly="true">
 					<f:selectItem itemLabel="Selecione um carro" noSelectionOption="true"/>
 					<f:selectItems value="#{carroDao.listaDisponiveis()}" var="u"
 						itemLabel="#{u.placa}" itemValue="#{u.id}"/>
-					<!--<f:ajax execute="@form"/>-->
+					<f:ajax event="change" render="modelo" listener="carroDao.carregaModelo"/>
 				</h:selectOneMenu>
-				<!-- 
+				
+				
+				
 				<h:outputLabel value="Modelo" for="modelo"/>
-				<h:inputText id="modelo" label="Modelo" value="#{osBean.os.carro.modelo}" readonly="true">
-					<f:ajax render="@form"/>
+				<h:inputText id="modelo" label="Modelo" value="#{osBean.os.carro.modelo}" rendered="true" readonly="true">
+					<f:ajax render="@form" />
 				</h:inputText>
-				-->	
+				
+				<script>
+					function funcao(){
+						var carro = document.querySelector("#carro");
+						
+					}
+					
+					
+				
+				</script>
+				
 				<h:outputLabel value="Descrição" for="descricao"/>
 				<h:inputTextarea id="descricao" value="#{osBean.os.descricao}" required="true" label="Descrição"
 					rows="3" styleClass="texto-longo">

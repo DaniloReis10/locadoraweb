@@ -23,15 +23,17 @@ public class OsDao {
 	private EntityManager manager;
 
 	public List<Os> lista() {
-		return manager.createQuery("select o from Os o", Os.class)
+		return manager.createQuery("select o from Os o ", Os.class)
+					.getResultList();
+	}
+	
+	public List<Os> listaAbertas() {
+		return manager.createQuery("select o from Os o where o.status='ABERTO'", Os.class)
 					.getResultList();
 	}
 	
 	public void adiciona(Os os){
-		os.setStatus(Status.ABERTO);
-		os.setCriadoEm(new Date());
-		os.getCarro().setStatusCarro(StatusCarro.STAND_BY);
-		manager.persist(os);
+		manager.merge(os);
 	}
 	
 	public void atualiza(Os os){
@@ -96,6 +98,7 @@ public class OsDao {
 		os.setFinalizadoEm(new Date());
 		os.setStatus(Status.FECHADO);
 		os.getCarro().setStatusCarro(StatusCarro.GARAGEM);
+		manager.merge(os);
 	}
 	
 	public void comenta(Integer id, Comentario comentario) {
@@ -114,5 +117,13 @@ public class OsDao {
 		}
 
 	}
-
+	
+	public String acompanha (Os os){
+		if (os.getCarro().getStatusCarro().equals("STAND_BY")){
+			return "/pages/ciclo/acompanha";
+		}
+		
+		return "/pages/ciclo/ciclo";
+	}
+	
 }

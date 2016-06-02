@@ -1,5 +1,6 @@
 package br.unifor.locadora.controller;
 
+import java.util.Date;
 import java.util.List;
 
 import javax.annotation.PostConstruct;
@@ -9,6 +10,8 @@ import javax.faces.bean.ManagedProperty;
 import br.unifor.locadora.dao.OsDao;
 import br.unifor.locadora.modelo.Carro;
 import br.unifor.locadora.modelo.Os;
+import br.unifor.locadora.modelo.Status;
+import br.unifor.locadora.modelo.StatusCarro;
 import br.unifor.locadora.modelo.Usuario;
 import br.unifor.locadora.util.FacesUtil;
 
@@ -61,6 +64,10 @@ public class OsBean {
 		this.oss = osDao.lista();
 	}
 	
+	public void listaAbertas(){
+		this.oss = osDao.listaAbertas();
+	}
+	
 	public void remove(Os os){
 		osDao.remove(os);
 		this.oss = osDao.lista();
@@ -69,11 +76,21 @@ public class OsBean {
 	
 	public void conclui(Os os){
 		osDao.conclui(os);
+		this.oss = osDao.lista();
+		new FacesUtil().mensagemSucesso("Ordem de Serviço fechada com sucesso!");
 	}
 	
 	public void altera(Os os){
 		osDao.atualiza(os);
 		new FacesUtil().mensagemSucesso("Ordem de Serviço alterada com sucesso!");
+	}
+	
+	public void carregaModelo(Os os){
+		os.getCarro().setModelo(os.getCarro().getModelo());;
+	}
+	
+	public void acompanha(Os os){
+		osDao.acompanha(os);
 	}
 	
 }

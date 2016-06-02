@@ -21,7 +21,7 @@ import javax.persistence.TemporalType;
 @Entity
 public class Os implements Serializable{
 	
-	private static final long serialVersionUID = 1L;
+	//private static final long serialVersionUID = 1L;
 	
 	@Id
 	@GeneratedValue
@@ -36,16 +36,16 @@ public class Os implements Serializable{
 	@Temporal(TemporalType.TIMESTAMP)
 	private Date finalizadoEm;
 	
-	@Column(length=1000)
-	private String comentario;
-	
-	@OneToOne
+//	@Column(length=1000)
+//	private String comentario;
+//	
+	@OneToOne(cascade=CascadeType.ALL)
 	private Carro carro;
 	
-	@ManyToOne
+	@OneToOne(cascade=CascadeType.ALL)
 	private Usuario responsavel;
 	
-	@ManyToOne
+	@OneToOne(cascade=CascadeType.ALL)
 	private Usuario cliente;
 	
 	@Enumerated(EnumType.STRING)
@@ -87,13 +87,13 @@ public class Os implements Serializable{
 		this.criadoEm = criadoEm;
 	}
 
-	public String getComentario() {
-		return comentario;
-	}
-
-	public void setComentario(String comentario) {
-		this.comentario = comentario;
-	}
+//	public String getComentario() {
+//		return comentario;
+//	}
+//
+//	public void setComentario(String comentario) {
+//		this.comentario = comentario;
+//	}
 
 	public Carro getCarro() {
 		return carro;
@@ -143,10 +143,10 @@ public class Os implements Serializable{
 		this.finalizadoEm = finalizadoEm;
 	}
 
-	public static long getSerialversionuid() {
-		return serialVersionUID;
-	}
-	
+//	public static long getSerialversionuid() {
+//		return serialVersionUID;
+//	}
+//	
 	@Override
 	public int hashCode() {
 		final int prime = 31;
