@@ -170,12 +170,8 @@ public class OsDao {
 	}
 	
 	//teste
-	public String acompanha (Os os){
-		if (os.getCarro().getStatusCarro().equals("STAND_BY")){
-			return "/pages/ciclo/acompanha";
-		}
-		
-		return "/pages/ciclo/ciclo";
+	public void acompanha (Os os){
+		this.busca(os.getId());
 	}
 	
 }

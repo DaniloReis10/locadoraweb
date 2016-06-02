@@ -117,9 +117,38 @@ public class OsBean {
 		os.getCarro().setModelo(os.getCarro().getModelo());;
 	}
 	
-	//teste
-	public void acompanha(Os os){
-		osDao.acompanha(os);
+	/**
+	 * Redireciona a página dependendo do Status do Carro
+	 * @param os
+	 * @return page
+	 */
+	public String acompanha(){
+		switch (os.getCarro().getStatusCarro()){
+		case DEVOLVIDO:
+			break;
+		case EM_LAVAGEM:
+			break;
+		case EM_MANUTENÇÃO:
+			break;
+		case EM_VISTORIA:
+			break;
+		case ENTREGUE:
+			break;
+		case GARAGEM:
+			break;
+		case STAND_BY:
+			return "acompanha";
+		default:
+			return null;
+		}
+//		osDao.acompanha(os);
+//		System.out.println(os.getId());
+//		System.out.println(os.getStatus());
+//		osDao.busca(os.getId());
+//		if (os.getCarro().getStatusCarro()==StatusCarro.STAND_BY){
+//			return "acompanha?faces-redirect=true";
+//		}
+		return null;
 	}
 	
 }

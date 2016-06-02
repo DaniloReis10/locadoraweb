@@ -44,8 +44,7 @@
 				
 				<h:column>
 					<f:facet name="header"></f:facet>
-					<h:commandLink value="acompanhar" action="acompanha">
-						<f:ajax render="@form :mensagens" execute="@form"/>
+					<h:commandLink value="acompanhar" action="#{osBean.acompanha}">
 						<f:setPropertyActionListener value="#{os}" target="#{osBean.os}"></f:setPropertyActionListener>
 					</h:commandLink>
 				</h:column>
