@@ -67,7 +67,7 @@
                         <p class="form-content">Email*</p>
                         <input type="text" id="email" required oninvalid="this.setCustomValidity('Nome inválido')" oninput="setCustomValidity('')" pattern=".{1,}[a-zA-Z]+" required title="Nome inválido" name="email" class="form-input" />
                         <p class="form-content">Data de Nascimento*</p>
-                        <input type="text" id="nascimento" oninvalid="this.setCustomValidity('Data inválida')" oninput="setCustomValidity('')" pattern="\d{1,2}/\d{1,2}/\d{4}" required title="Data inválida" class="datepicker form-input" name="date" />
+                        <input type="text" id="nascimento" oninvalid="this.setCustomValidity('Data inválida')" oninput="setCustomValidity('')" required title="Data inválida" class="datepicker form-input" name="date" />
 
                         <p class="form-content">Genero*</p>
                         <select id="sex-selector" required="" class="form-input" name="sex">
@@ -80,7 +80,7 @@
                         <p class="form-content">Digite novamente sua senha*</p>
                         <input type="password" name="pwd-conf" required class="form-input" />
                         <p class="form-content">CEP:*</p>
-                        <input type="text" id="cep" required oninvalid="this.setCustomValidity('CEP inválido')" oninput="setCustomValidity('')" pattern="\d{5}-\d{3}" onblur="checkCode(this.value);" required title="CEP inválido" name="zipcode" class="form-input" />
+                        <input type="text" id="cep" required oninvalid="this.setCustomValidity('CEP inválido')" oninput="setCustomValidity('')" onblur="checkCode(this.value);" required title="CEP inválido" name="zipcode" class="form-input" />
                         <p class="form-content">Estado*</p>
                         <input type="text" id="estado" class="form-input" id="state" name="state" disabled />
                         <p class="form-content">Cidade*</p>
