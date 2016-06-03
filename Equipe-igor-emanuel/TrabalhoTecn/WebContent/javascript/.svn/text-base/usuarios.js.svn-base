@@ -1,0 +1,76 @@
+function iniciarRequisicao() {
+	
+	 var request = false;  
+	             try 
+	             {  
+	                 request = new XMLHttpRequest();  
+	             }
+	             catch (trymicrosoft) 
+	             {  
+	                 try 
+	                 {  
+	                     request = new ActiveXObject("Msxml2.XMLHTTP");  
+	                 } 
+	                 catch (othermicrosoft) 
+	                 {  
+	                     try 
+	                     {  
+	                         request = new ActiveXObject("Microsoft.XMLHTTP");  
+	                     } catch (failed) 
+	                     {  
+	                         request = false;  
+	                     }    
+	                 }
+	                 
+	             }  
+	return request;
+}
+
+function cadastrarUsuario()
+{
+	
+    var nome = document.getElementById("nome").value;
+	var email= document.getElementById("email").value;
+	var telefone = document.getElementById("telefone").value;
+	var celular = document.getElementById("celular").value;
+	var rg = document.getElementById("rg").value
+	var cpf = document.getElementById("cpf").value
+	var login = document.getElementById("login").value;
+	var senha = document.getElementById("senha").value;
+	var dataNascimento = document.getElementById("dataNascimento").value
+	var endereco = document.getElementById("endereco").value;
+	var bairro = document.getElementById("bairro").value;
+	var numero = document.getElementById("numero").value;
+	
+	var url=null;
+	
+	
+	url="../ajax/ajaxUsuarios.jsp?comando=cadastrarUsuario&nome="+nome+"&email="+email+"&telefone="+telefone+"&celular="+celular+"&rg="+rg+"&cpf="+cpf+"&login="+login+"&senha="+senha+"&dataNascimento="+dataNascimento+"&endereco="+endereco+"&bairro="+bairro+"&numero="+numero;
+	
+	var requisicaoLocal=iniciarRequisicao();
+	requisicaoLocal.onreadystatechange=function()
+		{
+		respostaCadastrarUsuario(requisicaoLocal);
+		};
+	requisicaoLocal.open("POST",url,'false');
+	requisicaoLocal.send(null);
+
+}
+          
+function respostaCadastrarUsuario(requisicao) 
+{
+	if(requisicao.readyState==4)
+	{
+		if(requisicao.status==200)
+		{
+			var xml;
+			eval("xml="+requisicao.responseText);
+			var status=xml.root.validacao;
+			
+			if(status == 0)
+				alert("Cadastro efetuado com sucesso!");
+				else
+				alert("N‹o foi possivel efetuar o cadastro!");					
+		}
+	}
+}

@@ -1,0 +1,183 @@
+* {
+    font-family: "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
+}
+.form-signup {
+    width: 30%;
+    text-align: center;
+    margin-top: 128px;
+    color: #989595;
+}
+.form-login {
+    margin-top: 400px;
+    text-align: center;
+    margin-right: -256px;
+    float: right;
+}
+.form-input {
+    color: #333333;
+    font-size: 16px;
+    font-weight: normal;
+    width: 100%;
+    height: 40px;
+    margin-bottom: 16px;
+}
+.form-content {
+    margin-bottom: -0.25%;
+    font-size: 18px;
+    font-weight: normal;
+    text-align: left;
+}
+#button {
+    color: white;
+    background: #189a85;
+    font-size: 18px;
+    width: 50%;
+    height: 64px;
+    margin-top: 32px;
+    margin-bottom: 32px;
+}
+#button:hover {
+    background: #198577;
+}
+.container-fluid {
+    padding: 0;
+}
+.center-row {
+    text-align: center;
+}
+.center-col {
+    margin: 0 auto;
+    display: inline-block;
+    float: none;
+}
+.navbar-header {
+    min-height: 80px;
+}
+.display-table {
+    display: flex !important;
+    align-items: center !important;
+    float: none !important;
+}
+.navbar-default {
+    background-color: #1b2a3a;
+    border:0px;
+}
+.main-container {
+    background: url("../assets/car-3.jpeg");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;
+    background-size: cover;
+    height: 55em;
+    display: flex;
+    align-items: center;
+}
+.panels-container {
+    margin-top: 32px;
+    margin-bottom: 32px;
+}
+.thumbnail-cep{
+    background: black;
+
+    /*filter: alpha(opacity=50);*
+    opacity: 0.5;*/
+    background: rgba(0,0,0,0.5);
+    border: transparent;
+    min-height: 200px;
+}
+
+ul#cities{
+     list-style-type:square !important;
+     padding: 12px;
+}
+
+
+ul#cities li{
+     display: inline;
+     margin: 12px;
+     color: white;
+     font-weight: bold;
+}
+#cep-input{
+    height:36px;
+    font-weight: bold;
+}
+#cep-contact{
+
+}
+#help{
+    color:white;
+    font-weight:bold;
+}
+
+.thumbnail-cep:hover{
+    border: transparent;
+}
+
+.thumbnail{
+    border-bottom-width: 4px;
+}
+.thumbnail:hover {
+    border-bottom-color: #18bc9c;
+}
+a {
+    color: #8a8a8a;
+}
+a:hover {
+    color: #8a8a8a;
+    text-decoration: none;
+}
+.plan-headers {
+    color: #18bc9c;
+    text-align: center;
+    font-weight: bold;
+}
+.p-buttons {
+    text-align: center;
+}
+.btn-plans {
+    background-color: #2f3263;
+    color: white;
+}
+.btn-plans:hover {
+    background-color: #343878;
+    color: white;
+}
+.btn-style {
+    color: white;
+    background: #18bc9c;
+}
+.btn-style:hover {
+    color: white;
+    background: #0cbe6f!important;
+}
+footer {
+    min-height: 160px;
+    width: 100%;
+    background-color: #232323;
+}
+.contact-list {
+    list-style-type: none;
+}
+.navbar-footer {
+    float: none;
+    margin: 0 auto;
+    display: table;
+    table-layout: fixed;
+    margin-top: 32px;
+}
+.social-icons {
+    color: #7d868b;
+}
+.fa-facebook-official:hover {
+    color: #3b5998;
+}
+.fa-instagram:hover {
+    color: #231f20;
+}
+.fa-youtube:hover {
+    color: #b31217;
+}
+.fa-twitter:hover {
+    color: #55acee;
+}

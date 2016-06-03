@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://java.sun.com/xml/ns/javaee" xmlns:web="http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd" xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd" id="WebApp_ID" version="2.5">
+  <display-name>Trabalho2</display-name>
+  <welcome-file-list>
+    <welcome-file>index.html</welcome-file>
+    <welcome-file>index.htm</welcome-file>
+    <welcome-file>index.jsp</welcome-file>
+    <welcome-file>default.html</welcome-file>
+    <welcome-file>default.htm</welcome-file>
+    <welcome-file>default.jsp</welcome-file>
+  </welcome-file-list>
+  <distributable/>
+  <filter>
+    <filter-name>Filtro Requisicoes</filter-name>
+    <filter-class>servlets.FiltroRequisicoes</filter-class>
+  </filter>
+  <filter-mapping>
+    <filter-name>Filtro Requisicoes</filter-name>
+    <url-pattern>/ajax/*</url-pattern>
+  </filter-mapping>
+  <servlet>
+    <servlet-name>SimpleCaptcha</servlet-name>
+    <servlet-class>nl.captcha.servlet.SimpleCaptchaServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>StickyCaptcha</servlet-name>
+    <servlet-class>nl.captcha.servlet.StickyCaptchaServlet</servlet-class>
+    <init-param>
+      <param-name>width</param-name>
+      <param-value>250</param-value>
+    </init-param>
+    <init-param>
+      <param-name>height</param-name>
+      <param-value>75</param-value>
+    </init-param>
+  </servlet>
+  <servlet>
+    <servlet-name>ChineseCaptcha</servlet-name>
+    <servlet-class>nl.captcha.servlet.ChineseCaptchaServlet</servlet-class>
+    <init-param>
+      <param-name>width</param-name>
+      <param-value>265</param-value>
+    </init-param>
+    <init-param>
+      <param-name>height</param-name>
+      <param-value>50</param-value>
+    </init-param>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>SimpleCaptcha</servlet-name>
+    <url-pattern>/simpleImg</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>StickyCaptcha</servlet-name>
+    <url-pattern>/stickyImg</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>ChineseCaptcha</servlet-name>
+    <url-pattern>/chineseImg</url-pattern>
+  </servlet-mapping>
+</web-app>
