@@ -9,6 +9,11 @@ import beans.FuncionarioBean;
 import persistencias.Funcionario;
 import utils.Container;
 
+/**
+ * Classe controller referente a funcionarios
+ * @author Lucas
+ *
+ */
 public class FuncionariosController extends Controller {
 	
 	FuncionarioBean beanFuncionarios = new FuncionarioBean();
@@ -21,6 +26,10 @@ public class FuncionariosController extends Controller {
 		beanFuncionarios = (FuncionarioBean) Container.setBean(beanFuncionarios, request.getParameterMap());
 	}
 	
+	/**
+	 * Método cadastro de funcionario após autenticação
+	 * @return none
+	 */
 	public void cadastrarFuncionario() throws Exception
 	{
 		try

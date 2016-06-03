@@ -10,7 +10,11 @@ import org.hibernate.cfg.Configuration;
 import org.hibernate.criterion.Order;
 import org.hibernate.criterion.Restrictions;
 
-
+/**
+ * Classe de configuração do banco referente ao Hibernate Framework 
+ * @author Lucas
+ *
+ */
 public class SessaoUtil {
 	
 	private static final SessionFactory sessionFactory;      
@@ -45,6 +49,10 @@ public class SessaoUtil {
     }
     
 
+    /**
+	 * Abre a sessão corrente
+	 * @return none
+	 */
     public static Session openSession() {  
     	threadLocal.set(sessionFactory.openSession());   
         return threadLocal.get();   
@@ -67,6 +75,10 @@ public class SessaoUtil {
         return threadLocal.get();   
     }  
 	
+    /**
+	 * Método padrão inserir hibernate
+	 * @return resultado da ação (Boolean)
+	 */
     public static boolean inserir(Object object) {
         try 
         {
@@ -81,6 +93,10 @@ public class SessaoUtil {
         }
     }
     
+    /**
+	 * Método padrão atualizar hibernate
+	 * @return resultado da ação (Boolean)
+	 */
     public static boolean atualizar(Object object) {
         try 
         {
@@ -95,6 +111,10 @@ public class SessaoUtil {
         }
     }
     
+    /**
+	 * Método padrão deletar hibernate
+	 * @return resultado da ação (Boolean)
+	 */
     public static boolean deletar(Object object) {
         try 
         {
@@ -109,6 +129,10 @@ public class SessaoUtil {
         }
     }
     
+    /**
+	 * Método de consulta do hibernate com adicão de criteria
+	 * @return lista com da consulta (List)
+	 */
 	@SuppressWarnings("unchecked")
 	public static List consultar(String classes,String camposCondicao,String tiposCamposCondicao,String operadorCamposCondicao,String valoresCondicao,String sinalizadorCondicaoPrincipal,String ordenacao,int limite,int pagina) 
 	{

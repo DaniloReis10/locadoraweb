@@ -10,6 +10,11 @@ import beans.ClienteBean;
 import persistencias.Clientes;
 import utils.Container;
 
+/**
+ * Classe controller referente as acões de clientes
+ * @author Lucas
+ *
+ */
 public class ClientesController extends Controller {
 	
 	ClienteBean beanClientes = new ClienteBean();
@@ -22,6 +27,10 @@ public class ClientesController extends Controller {
 		beanClientes = (ClienteBean) Container.setBean(beanClientes, request.getParameterMap());
 	}
 	
+	/**
+	 * Método cadastro de cliente após autenticação
+	 * @return none
+	 */
 	public void cadastrarCliente() throws Exception
 	{
 		try

@@ -6,6 +6,11 @@ import javax.servlet.http.HttpSession;
 
 import org.json.JSONObject;
 
+/**
+ * Classe mãe que deve ser implementada por todos os controllers
+ * @author Lucas
+ *
+ */
 public class Controller {
 
 	public HttpServletRequest request;

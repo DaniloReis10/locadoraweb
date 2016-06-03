@@ -8,8 +8,17 @@ import java.util.Date;
 import java.util.HashMap;
 import java.util.Map;
 
+/**
+ * Classe responsavel por armazenar metodos que são usados por todo sistema
+ * @author Lucas
+ *
+ */
 public class Container {
 	
+	/**
+	 * Método responsavel por setar os beans de acordo com os parametros passados na requisição
+	 * @return retorna o objeto bean preenchido
+	 */
 	public static Object setBean(Object objeto, Map<String, String[]> parametros) {
 		Class classe = objeto.getClass();
 		Map<String, Method> mapaMetodos = new HashMap<String, Method>();
@@ -41,6 +50,10 @@ public class Container {
 		return objeto;
 	}
 
+	/**
+	 * Método responsavel por formatar a data para o formato dd/MM/yyyy
+	 * @return data formatada (Date)
+	 */
 	public static Date formatarData(String dataNaoFormatada) throws ParseException{
 		
 		SimpleDateFormat dataInicioTeste  = new SimpleDateFormat("dd/MM/yyyy");  

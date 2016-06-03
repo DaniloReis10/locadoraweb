@@ -9,8 +9,17 @@ import javax.servlet.http.HttpServletResponse;
 
 import controllers.Controller;
 
+/**
+ * Classe complemento do filtro onde ocorre o direcionamento da requisição para as classes do pacote de controllers
+ * @author Lucas
+ *
+ */
 public class FactoryRequisicoes {
 
+	/**
+	 * Método responsavel por direcionar a requisição para as classes do pacote de controllers
+	 * @return data formatada (Date)
+	 */
 	public static Controller run(String nomeClasse, HttpServletRequest servletRequest, HttpServletResponse servletResponse) throws Exception {
 		
 		Controller objeto=null;

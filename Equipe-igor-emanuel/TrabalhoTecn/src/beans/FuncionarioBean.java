@@ -8,6 +8,11 @@ import javax.persistence.Id;
 import javax.persistence.SequenceGenerator;
 import javax.persistence.Table;
 
+/**
+ * Classe modelo referente a tabela funcionario
+ * @author Lucas
+ *
+ */
 @Entity
 @Table(name="funcionario")
 @SequenceGenerator(name="funcionario_id_seq" , sequenceName="funcionario_id_seq")

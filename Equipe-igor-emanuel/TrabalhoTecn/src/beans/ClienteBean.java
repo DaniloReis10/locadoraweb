@@ -1,4 +1,4 @@
-	package beans;
+package beans;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
@@ -8,6 +8,11 @@ import javax.persistence.Id;
 import javax.persistence.SequenceGenerator;
 import javax.persistence.Table;
 
+/**
+ * Classe modelo referente a tabela cliente
+ * @author Lucas
+ *
+ */
 @Entity
 @Table(name="cliente")
 @SequenceGenerator(name="cliente_id_seq" , sequenceName="cliente_id_seq")

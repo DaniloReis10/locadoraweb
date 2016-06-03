@@ -13,6 +13,10 @@ import org.hibernate.StaleObjectStateException;
 
 public class HibernateSessionRequestFilter implements Filter {   
 	  
+	/**
+	 * Método responsavel por iniciar requisção no hibernate
+	 * @return none
+	 */
     @SuppressWarnings("unchecked")   
     public void doFilter(ServletRequest request, ServletResponse response,FilterChain chain) throws IOException, ServletException {   
            

@@ -4,10 +4,19 @@ import java.util.List;
 
 import hibernate.SessaoUtil;
 
+/**
+ * Classe DAO referente a logins
+ * @author Lucas
+ *
+ */
 public class Logins {
 	
 	boolean validacao = false;
 	
+	/**
+	 * Método responsavel por efetuar o login de clientes checando as credenciais no banco
+	 * @return validação (Boolean)
+	 */
 	public boolean validarLoginCliente(String email, String senha){
 		
 		SessaoUtil.openSession();
@@ -20,6 +29,10 @@ public class Logins {
 	return validacao;
 	}
 	
+	/**
+	 * Método responsavel por efetuar o login de funcionarios checando as credenciais no banco
+	 * @return validação (Boolean)
+	 */
 	public boolean validarLoginFuncionario(String email, String senha){
 		
 		SessaoUtil.openSession();

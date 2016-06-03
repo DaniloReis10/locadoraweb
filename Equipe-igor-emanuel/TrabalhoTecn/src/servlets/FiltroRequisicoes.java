@@ -13,6 +13,11 @@ import javax.servlet.http.HttpServletResponse;
 
 import utils.FactoryRequisicoes;
 
+/**
+ * Classe responsavel pela inicialização do filtro mapeado no web.xml
+ * @author Lucas
+ *
+ */
 public class FiltroRequisicoes implements Filter {
 
 	public void destroy() {
@@ -20,6 +25,10 @@ public class FiltroRequisicoes implements Filter {
 
 	}
 	
+	/**
+	 * Método responsavel por formatar a data para o formato dd/MM/yyyy
+	 * @return none 
+	 */
 	public void doFilter(ServletRequest request, ServletResponse response, FilterChain filtro) throws IOException, ServletException {
 
 		HttpServletRequest servletRequest=(HttpServletRequest) request;
@@ -37,6 +46,11 @@ public class FiltroRequisicoes implements Filter {
 		}
 		
 	}
+	
+	/**
+	 * Método invocado ao inicio do filtro. Usado neste contexto apenas para avisar do mesmo via console.
+	 * @return none
+	 */
 
 	public void init(FilterConfig arg0) throws ServletException {
 		System.out.println("Iniciando Filtro... ");
